@@ -1,4 +1,6 @@
 <?php
+require 'router/router.php';
+
 // Database inloggegevens
 $host = "localhost";
 $dbname = "profileapp";
