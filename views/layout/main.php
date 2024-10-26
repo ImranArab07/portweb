@@ -78,5 +78,5 @@
         </div>
     </div>
 </section>
-<script src="../views/js/myScript.js"></script>
+<script src="/views/js/myScript.js"></script>
 </body>

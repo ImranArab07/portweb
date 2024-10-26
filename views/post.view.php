@@ -1,5 +1,5 @@
 
-<html>
+<html lang="en">
 
 <link rel="stylesheet" href="../views/css/myStyle.css">
 <form action="/index.php" method="post">

@@ -1,3 +1,3 @@
 <?php
 
-require 'views/layout/main.php';
+require 'views/home.view.php';

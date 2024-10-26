@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webportfolio</title>
-    <link rel="stylesheet" href="../views/css/myStyle.css">
+    <link rel="stylesheet" href="/views/css/myStyle.css">
 
 </head>
 <body>
@@ -43,12 +43,12 @@
                 <span></span>
             </div>
             <div class="menu-links">
-                <li><a href="home.view.php" onclick="toggleMenu()">Home</a></li>
-                <li><a href="login.view.php" onclick="toggleMenu()">Login</a></li>
-                <li><a href="project.view.php" onclick="toggleMenu()">Portfolio</a></li>
-                <li><a href="vaardigheden.view.php" onclick="toggleMenu()">Vaardigheden</a></li>
-                <li><a href="contact.view.php" onclick="toggleMenu()">Contact </a></li>
-                <li><a href="post.view.php" onclick="toggleMenu()">New post</a></li>
+                <li><a href="/home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="/login" onclick="toggleMenu()">Login</a></li>
+                <li><a href="/portfolio" onclick="toggleMenu()">Portfolio</a></li>
+                <li><a href="/vaardigheden" onclick="toggleMenu()">Vaardigheden</a></li>
+                <li><a href="/contact" onclick="toggleMenu()">Contact </a></li>
+                <li><a href="/post" onclick="toggleMenu()">New post</a></li>
 
             </div>
         </div>
@@ -56,7 +56,7 @@
     <section id="profile">
 
         <div class="section_pic-container">
-            <img src="./images/Imran.png" alt="Imran Arab profile picture">
+            <img src="/views/images/Imran.png" alt="Imran Arab profile picture">
         </div>
 
 
@@ -66,19 +66,19 @@
             <h1 class="title">Imran Arab</h1>
             <p class="section__text__p2">Software Developer</p>
             <div class="btn-container">
-            <button class="btn btn-color-2" onclick="window.open('./assets/cv imran.docx.pdf')">Download cv</button>
+            <button class="btn btn-color-2" onclick="window.open('/views/assets/cv imran.docx.pdf')">Download cv</button>
             <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact info</button>
         </div>
         <div id="socials-container">
-            <img src="./assets/teamss.jpg" alt="My Teams profile"
+            <img src="/views/assets/teamss.jpg" alt="My Teams profile"
                  class="icon" onclick="location.href='https://teams.microsoft.com/v2/'"/>
 
-            <img src="./assets/github.jpg" alt="My Github profile"
+            <img src="/views/assets/github.jpg" alt="My Github profile"
                  class="icon" onclick="location.href='https://github.com/ImranArab07'"/>
         </div>
         </div>
     </section>
-<script src="../views/js/myScript.js"></script>
+<script src="/views/js/myScript.js"></script>
 </body>
 
 </html>
