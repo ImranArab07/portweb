@@ -1,8 +1,16 @@
 
 <html lang="en">
+<head>
+<link rel="stylesheet" href="/views/css/myStyle.css">
+</head>
+<body>
 
-<link rel="stylesheet" href="../views/css/myStyle.css">
-<form action="/index.php" method="post">
+<?php if (!empty($message)): ?>
+<p><?php echo $message;?></p>
+<?php endif; ?>
+
+<form action="/post" method="post">
+
         <div>
             <label for="title">Title:</label>
             <input type="text" id="title" name="title"><br><br>
@@ -22,6 +30,6 @@
             <button type="submit">Submit</button>
         </div>
     </form>
-
+</body>
 </html>
 

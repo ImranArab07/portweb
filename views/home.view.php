@@ -23,12 +23,12 @@
 <!---->
 <!--        </ul>-->
         <ul class="nav-links">
-            <li class="hideOnMobile"><a href="home.view.php">Home</a></li>
-            <li class="hideOnMobile"><a href="login.view.php">Login</a></li>
-            <li class="hideOnMobile"><a href="project.view.php">Portfolio</a></li>
-            <li class="hideOnMobile"><a href="vaardigheden.view.php">Vaardigheden</a></li>
-            <li class="hideOnMobile"><a href="contact.view.php">Contact </a></li>
-            <li class="hideOnMobile"><a href="post.view.php">New post</a></li>
+            <li class="hideOnMobile"><a href="/home">Home</a></li>
+            <li class="hideOnMobile"><a href="/login">Login</a></li>
+            <li class="hideOnMobile"><a href="/portfolio">Portfolio</a></li>
+            <li class="hideOnMobile"><a href="/vaardigheden">Vaardigheden</a></li>
+            <li class="hideOnMobile"><a href="/contact">Contact </a></li>
+            <li class="hideOnMobile"><a href="/post">New post</a></li>
 <!--            <li class="menu-button" onclick=showSidebar()> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>-->
         </ul>
         </div>

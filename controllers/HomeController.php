@@ -1,3 +1,7 @@
 <?php
 
-require 'views/home.view.php';
+class HomeController {
+    public function index() {
+        $view = 'views/home.view.php';
+    }
+}
