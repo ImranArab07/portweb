@@ -49,4 +49,3 @@ switch ($uri) {
         break;
 
 }
-echo "Pouter werkt!";

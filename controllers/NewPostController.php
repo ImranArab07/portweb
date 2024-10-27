@@ -27,6 +27,7 @@ class NewPostController
     public function store()
     {
         $message = "";
+        $postCreated = false;
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Haal de gegevens op uit het formulier
@@ -46,6 +47,7 @@ class NewPostController
 
             // Succesbericht
             $message = "Nieuwe post succesvol aangemaakt!";
+            $postCreated = true;
         }
 
         $view = 'views/post.view.php';

@@ -1,6 +1,7 @@
 
 <html lang="en">
 <head>
+
 <link rel="stylesheet" href="/views/css/myStyle.css">
 </head>
 <body>
@@ -9,6 +10,7 @@
 <p><?php echo $message;?></p>
 <?php endif; ?>
 
+<?php if (!isset($postCreated) || !$postCreated): ?>
 <form action="/post" method="post">
 
         <div>
@@ -30,6 +32,7 @@
             <button type="submit">Submit</button>
         </div>
     </form>
+<?php endif; ?>
 </body>
 </html>
 
