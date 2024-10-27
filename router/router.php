@@ -4,6 +4,8 @@ require_once 'controllers/HomeController.php';
 require_once 'controllers/NewPostController.php';
 require_once 'controllers/ContactController.php';
 require_once 'controllers/LoginController.php';
+require_once 'controllers/PostsController.php';
+
 
 
 $uri =trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
@@ -41,6 +43,11 @@ switch ($uri) {
 
     case 'register':
         require 'views/register.view.php';
+        break;
+
+    case 'posts':
+        $controller = new PostsController();
+        $controller->index();
         break;
 
     default:

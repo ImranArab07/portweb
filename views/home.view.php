@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="/views/css/myStyle.css">
 
 </head>
-<body>
+<!--<body>-->
+<header>
     <nav id="desktop-nav">
         <div class="logo">Imran Arab</div>
         <div>
@@ -28,8 +29,10 @@
             <li class="hideOnMobile"><a href="/portfolio">Portfolio</a></li>
             <li class="hideOnMobile"><a href="/vaardigheden">Vaardigheden</a></li>
             <li class="hideOnMobile"><a href="/contact">Contact </a></li>
+            <li class="hideOnMobile"><a href="/posts">Posts</a></li>
             <li class="hideOnMobile"><a href="/post">New post</a></li>
-<!--            <li class="menu-button" onclick=showSidebar()> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>-->
+
+            <!--            <li class="menu-button" onclick=showSidebar()> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>-->
         </ul>
         </div>
     </nav>
@@ -48,11 +51,14 @@
                 <li><a href="/portfolio" onclick="toggleMenu()">Portfolio</a></li>
                 <li><a href="/vaardigheden" onclick="toggleMenu()">Vaardigheden</a></li>
                 <li><a href="/contact" onclick="toggleMenu()">Contact </a></li>
+                <li><a href="/posts" onclick="toggleMenu()">Posts </a></li>
                 <li><a href="/post" onclick="toggleMenu()">New post</a></li>
 
             </div>
         </div>
     </nav>
+</header>
+<body>
     <section id="profile">
 
         <div class="section_pic-container">
