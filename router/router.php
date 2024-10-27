@@ -1,10 +1,17 @@
 <?php
 
+require_once 'controllers/HomeController.php';
+require_once 'controllers/NewPostController.php';
+require_once 'controllers/ContactController.php';
+require_once 'controllers/LoginController.php';
+
+
 $uri =trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 
 switch ($uri) {
     case '':
     case 'home':
+        require 'views/home.view.php';
         $controller = new HomeController();
         $controller->index();
         break;
@@ -42,3 +49,4 @@ switch ($uri) {
         break;
 
 }
+echo "Pouter werkt!";
