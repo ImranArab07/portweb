@@ -36,10 +36,10 @@ switch ($uri) {
         $controller->index();
         break;
 
-    case'login':
-        $controller = new LoginController();
-        $controller->index();
-        break;
+//    case'login':
+//        $controller = new LoginController();
+//        $controller->index();
+//        break;
 
     case 'register':
         require 'views/register.view.php';
