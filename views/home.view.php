@@ -21,7 +21,6 @@
             <li class="hideOnMobile"><a href="/posts">Posts</a></li>
             <li class="hideOnMobile"><a href="/post">New post</a></li>
 
-            <!--            <li class="menu-button" onclick=showSidebar()> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>-->
         </ul>
         </div>
     </nav>
@@ -62,7 +61,7 @@
             <p class="section__text__p2">Software Developer</p>
             <div class="btn-container">
             <button class="btn btn-color-2" onclick="window.open('/views/assets/cv imran.docx.pdf')">Download cv</button>
-            <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact info</button>
+            <button class="btn btn-color-1" onclick="location.href='./views/contact.view.php'">Contact info</button>
         </div>
         <div id="socials-container">
             <img src="/views/assets/teamss.jpg" alt="My Teams profile"
@@ -103,12 +102,16 @@
         </div>
         <img
                 src="/views/assets/arrow.jpg"
-                alt="arrow icon" class="icon arrrow"
+                alt="arrow icon" class="icon arrow"
                 onclick="scrollToSection('#vaardigheden')">
     </section>
     <section id="vaardigheden">
        <p class="section__text__p1">Explore my</p>
         <h1 class="title">Vaardigheden</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt</p>
         <div class="vaardigheden-details-container">
             <div class="about-containers">
             <div class="details-container">
@@ -169,6 +172,7 @@
                         class="project-img"/>
                 </div>
                 <h2 class="experience-sub-title project-title">Project One</h2>
+                <p class="section__text__p1"> My first project is .... , Do you want to know more? Click on Github or live Demo to go to my project </p>
                 <div class="btn-container">
                     <button class="btn btn-color-2 project-btn"
                             onclick="location.href='https://github.com/ImranArab07'">
@@ -188,6 +192,7 @@
                         class="project-img"/>
             </div>
             <h2 class="experience-sub-title project-title">Project Two</h2>
+            <p class="section__text__p1"> My Second project is .... , Do you want to know more? Click on Github or live Demo to go to my project </p>
             <div class="btn-container">
                 <button class="btn btn-color-2 project-btn"
                         onclick="location.href='https://github.com/ImranArab07'">
@@ -207,6 +212,7 @@
                         class="project-img"/>
             </div>
             <h2 class="experience-sub-title project-title">Project three</h2>
+            <p class="section__text__p1"> My Third project is .... , Do you want to know more? Click on Github or live Demo to go to my project </p>
             <div class="btn-container">
                 <button class="btn btn-color-2 project-btn"
                         onclick="location.href='https://github.com/ImranArab07'">
@@ -226,7 +232,6 @@
                 onclick="scrollToSection('#portfolio')">
 
     </section>
-
     <script src="/views/js/myScript.js"></script>
 </body>
 

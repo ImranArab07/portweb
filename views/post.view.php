@@ -54,8 +54,8 @@
 <?php endif; ?>
 
 <?php if (!isset($postCreated) || !$postCreated): ?>
-<form action="/post" method="post">
-
+<div class="post-form">
+<form action="/post" method="post" class="post-form-style">
         <div>
             <label for="title">Title:</label>
             <input type="text" id="title" name="title"><br><br>
@@ -71,10 +71,11 @@
             <input type="text" id="author" name="author"><br><br>
         </div>
 
-        <div>
+        <div class="post-submit">
             <button type="submit">Submit</button>
         </div>
     </form>
+</div>
 <?php endif; ?>
 <script src="/views/js/myScript.js"></script>
 </body>

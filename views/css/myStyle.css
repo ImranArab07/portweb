@@ -290,10 +290,13 @@ section {
     border-radius: 2rem;
 }
 
-.arrrow{
+.arrow{
     position: absolute;
-    right: -5rem;
+    right: 2rem;
     bottom: 2.5rem;
+    cursor: pointer;
+    width: 2rem;
+    height: auto;
 
 }
 
@@ -303,7 +306,7 @@ section {
     background: white;
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163,163,163);
+    /*border-color: rgb(163,163,163);*/
     text-align: center;
 }
 .section-container{
@@ -315,6 +318,8 @@ section {
     width: 400px;
     margin: auto 0;
 }
+
+
 /* Vaardigheden sectie */
 #vaardigheden {
   position: relative;
@@ -371,6 +376,7 @@ position: relative;
     margin: auto 0;
 }
 
+/*portfolio styling */
 #portfolio{
     position: relative;
 }
@@ -407,6 +413,9 @@ position: relative;
     width: 100%;
 }
 
+body.posts-page {
+    background-color: grey; /* Lichtgrijze achtergrond */
+}
 .post-box:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
@@ -435,32 +444,214 @@ position: relative;
 }
 
 
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+/* contact formulier */
+
+.contact-form {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url("/views/images/background.jpg") no-repeat center center;
+    background-size: cover;
+    margin: 0;
 }
 
-div {
-    margin-bottom: 15px;
+
+
+
+.contact-box-form p {
+    color: #fff;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
+.contact-form .content-contact-form{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact-form .content-contact-form h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.contact-form .content-contact-form p{
+
+    font-weight: 500;
+    color: #fff;
+}
+
+.contact-container-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: 0 ;
+    max-width: 1200px;
+    /*margin: auto;*/
+}
+.contact-container-form  .contactInfo-form{
+    width: 50%;
+    max-width: 1200px;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+}
+.contact-container-form .contactForm {
+    width: 50%;
+}
+
+
+.contact-container-form .contactInfo-form,
+.contact-container-form .contactForm {
+    margin: 0 2rem; /* Dit voegt aan beide zijkanten ruimte toe */
+}
+
+.contact-container-form  .contactInfo-form .contact-box-form{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.contact-container-form  .contactInfo-form .contact-box-form .contact-icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.contact-container-form  .contactInfo-form .contact-box-form .contact-text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.contact-container-form  .contactInfo-form .contact-box-form .contact-text h3{
+    font-weight: 500;
+    color: #00bcd4;
+}
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactForm .InputBox-contact{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactForm .InputBox-contact input,
+.contactForm .InputBox-contact textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid;
+    outline: none;
+    resize: none;
+}
+.contactForm .InputBox-contact span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm .InputBox-contact input:focus ~ span,
+.contactForm .InputBox-contact input:valid ~ span,
+.contactForm .InputBox-contact textarea:focus ~ span,
+.contactForm .InputBox-contact textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .InputBox-contact input[type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media (max-width: 991px) {
+    .contact-form{
+        padding: 20px;
+    }
+    .contact-container-form{
+        flex-direction: column;
+    }
+    .contact-container-form, .contactForm {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .contact-container-form .contactInfo-form{
+        margin-bottom: 40px;
+    }
+    .contact-container-form .contactInfo-form,
+    .contactForm{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    /* post formulier */
+
+    .post-form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .post-form-style div {
+        margin-bottom: 15px;
+    }
+
+    .post-form-style label {
+        display: block;
+        margin-bottom: 5px;
 
     }
 
-    input {
+    .post-form-style input {
         width: 100%;
         padding: 8px;
         box-sizing: border-box;
     }
 
-    button[type="submit"] {
+    .post-form-style button[type="submit"] {
         padding: 12px 24px;
         background-color: black;
         color: white;
@@ -473,32 +664,27 @@ label {
         display: block;
     }
 
-    button[type="submit"]:hover {
+    .post-form .post-form-style button[type="submit"]:hover {
         background-color: #333;
         /*color: white;*/
     }
 
-    .main {
+    .post-form-style .main {
         width: 100%;
         min-height: 100vh;
         padding: 20px;
         margin: 20px auto;
     }
 
-    .content {
+    .post-form-style p.content {
 
-        padding:200px;
+        padding: 200px;
         background-color: rgba(255, 255, 255, 0.8);
 
     }
 
-    .content img {
+    .post-form-style .content img {
         max-width: 100%;
 
     }
-
-
-
-
-
 
