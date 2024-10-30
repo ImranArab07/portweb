@@ -1,7 +1,4 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     document.querySelector('.sidebar li a svg').addEventListener('click', hideSidebar);
-//     document.querySelector('nav ul li:last-child a svg').addEventListener('click', showSidebar);
-// });
+
 function toggleMenu() {
     const menu = document.querySelector(".menu-links");
     const icon = document.querySelector(".hamburger-icon");
@@ -13,9 +10,41 @@ function toggleMenu() {
     overlay.classList.toggle("open")
 }
 
-//
-//
-//     sidebar.querySelector('li a svg').addEventListener('click', function() {
-//         sidebar.style.display = 'none'; // Zijbalk verbergen
-//     });
-// });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const progresses = document.querySelectorAll(".progress");
+    progresses.forEach(progress => {
+        const width = parseInt(progress.getAttribute("data-progress"));
+        progress.style.width = width + '%';
+
+        if (width <50) {
+            progress.style.backgroundColor = 'orange';
+        } else {
+            progress.style.backgroundColor = '#4caf50';
+        }
+    });
+});
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+function scrollToSection(sectionId) {
+    const target = document.querySelector(sectionId);
+    if (target) {
+        target.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+}
+

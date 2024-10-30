@@ -11,23 +11,12 @@
     <nav id="desktop-nav">
         <div class="logo">Imran Arab</div>
         <div>
-<!---->
-<!--        <ul class="sidebar">-->
-<!--            <li onclick="hideSidebar()"> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>-->
-<!--            <li><a href="index.view.php">Home</a></li>-->
-<!--            <li><a href="login.view.php">Login</a></li>-->
-<!--            <li><a href="project.view.php">Portfolio</a></li>-->
-<!--            <li><a href="vaardigheden.view.php">Vaardigheden</a></li>-->
-<!--            <li><a href="contact.view.php">Contact</a></li>-->
-<!--            <li><a href="post.view.php">New post</a></li>-->
-<!---->
-<!---->
-<!--        </ul>-->
+
         <ul class="nav-links">
             <li class="hideOnMobile"><a href="/home">Home</a></li>
-            <li class="hideOnMobile"><a href="/login">Login</a></li>
-            <li class="hideOnMobile"><a href="/portfolio">Portfolio</a></li>
-            <li class="hideOnMobile"><a href="/vaardigheden">Vaardigheden</a></li>
+            <li class="hideOnMobile"><a href="#about">Over mij</a></li>
+            <li class="hideOnMobile"><a href="#portfolio">Portfolio</a></li>
+            <li class="hideOnMobile"><a href="#vaardigheden">Vaardigheden</a></li>
             <li class="hideOnMobile"><a href="/contact">Contact </a></li>
             <li class="hideOnMobile"><a href="/posts">Posts</a></li>
             <li class="hideOnMobile"><a href="/post">New post</a></li>
@@ -47,9 +36,9 @@
             </div>
             <div class="menu-links">
                 <li><a href="/home" onclick="toggleMenu()">Home</a></li>
-                <li><a href="/login" onclick="toggleMenu()">Login</a></li>
-                <li><a href="/portfolio" onclick="toggleMenu()">Portfolio</a></li>
-                <li><a href="/vaardigheden" onclick="toggleMenu()">Vaardigheden</a></li>
+                <li><a href="#about" onclick="toggleMenu()">Over mij</a></li>
+                <li><a href="#portfolio" onclick="toggleMenu()">Portfolio</a></li>
+                <li><a href="#vaardigheden" onclick="toggleMenu()">Vaardigheden</a></li>
                 <li><a href="/contact" onclick="toggleMenu()">Contact </a></li>
                 <li><a href="/posts" onclick="toggleMenu()">Posts </a></li>
                 <li><a href="/post" onclick="toggleMenu()">New post</a></li>
@@ -82,53 +71,165 @@
             <img src="/views/assets/github.jpg" alt="My Github profile"
                  class="icon" onclick="location.href='https://github.com/ImranArab07'"/>
         </div>
-        </div>
     </section>
-<script src="/views/js/myScript.js"></script>
+    <section id="about">
+       <p class="section__text__p1"> Kom Meer Over Mij Te Weten</p>
+        <h1 class="title">Over mij</h1>
+        <div class="section-container">
+            <div class="section_pic-container">
+                <img src="/views/images/Arab.jpeg" alt="Profile picture" class="about-pic"/>
+                </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="/views/images/experience.jpg" alt="experience icon" class="icon">
+                       <h3>Experience</h3>
+                        <p> 3 Months <br> Frontend Developer</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="/views/assets/educIcon.jpg" alt="Education icon" class="icon">
+                        <h3>Education</h3>
+                        <p> Havo Diploma <br> (current study) AD Software Development</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img
+                src="/views/assets/arrow.jpg"
+                alt="arrow icon" class="icon arrrow"
+                onclick="scrollToSection('#vaardigheden')">
+    </section>
+    <section id="vaardigheden">
+       <p class="section__text__p1">Explore my</p>
+        <h1 class="title">Vaardigheden</h1>
+        <div class="vaardigheden-details-container">
+            <div class="about-containers">
+            <div class="details-container">
+                <h2 class="vaardigheden-sub-title">Frontend Development</h2>
+                <div>
+                    <h3>HTML</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="80">80%</div>
+                    </div>
+                </div>
+                <div>
+                    <h3>CSS</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="70">70%</div>
+                    </div>
+                </div>
+                <div>
+                    <h3>JavaScript</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="60">60%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="details-container">
+                <h2 class="vaardigheden-sub-title">Backend Development</h2>
+                <div>
+                    <h3>PHP</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="50">50%</div>
+                    </div>
+                </div>
+                <div>
+                    <h3>MySQL</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="65">65%</div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Git</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-progress="75">75%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="/views/assets/arrow.jpg" alt="arrow icon" class="icon arrrow" onclick="scrollToSection('#portfolio')">
+    </section>
+    <section id="portfolio">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Portfolio</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img
+                        src="/views/images/Project1.jpg"
+                        alt="Portfolio project 1"
+                        class="project-img"/>
+                </div>
+                <h2 class="experience-sub-title project-title">Project One</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/ImranArab07'">
+                        Github
+                    </button>
+                    <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/ImranArab07'">
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+        <div class="details-container color-container">
+            <div class="article-container">
+                <img
+                        src="/views/images/Project2.jpg"
+                        alt="Portfolio project 2"
+                        class="project-img"/>
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+                <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/ImranArab07'">
+                    Github
+                </button>
+                <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/ImranArab07'">
+                    Live Demo
+                </button>
+            </div>
+        </div>
+        <div class="details-container color-container">
+            <div class="article-container">
+                <img
+                        src="/views/images/Project3.jpg"
+                        alt="Portfolio project 3"
+                        class="project-img"/>
+            </div>
+            <h2 class="experience-sub-title project-title">Project three</h2>
+            <div class="btn-container">
+                <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/ImranArab07'">
+                    Github
+                </button>
+                <button class="btn btn-color-2 project-btn"
+                        onclick="location.href='https://github.com/ImranArab07'">
+                    Live Demo
+                </button>
+            </div>
+        </div>
+            </div>
+        </div>
+        <img
+                src="/views/assets/arrow.jpg"
+                alt="arrow icon" class="icon arrrow"
+                onclick="scrollToSection('#portfolio')">
+
+    </section>
+
+    <script src="/views/js/myScript.js"></script>
 </body>
 
+
 </html>
-<!--<script>-->
-<!--    function showSidebar(){-->
-<!--        const sidebar = document.querySelector('.sidebar')-->
-<!--        sidebar.style.display = 'flex'-->
-<!--    }-->
-<!--    function hideSidebar(){-->
-<!--        const sidebar = document.querySelector('.sidebar')-->
-<!--        sidebar.style.display = 'none'-->
-<!--    }-->
-<!--</script>-->
-<!--</header>-->
-
-<!--<! Main layout with sidebar and content -->
-<!--<div class="container">-->
-<!---->
-    <!-- Sidebar -->
-<!--    <aside class="sidebar">-->
-<!--        <h2>Categorieen</h2>-->
-<!--        <ul>-->
-<!--            <li><a href="#">post geschiedenis</a></li>-->
-<!--            <li><a href="#">Andere posts</a></li>-->
-<!---->
-<!--        </ul>-->
-<!--    </aside>-->
-
-    <!-- Main content area using Grid -->
-<!--    <main class="main">-->
-<!--        <section class="content" id="content1">-->
-<!--            <h2>Content 1</h2>-->
-<!--            <p>Mijn portfolio</p>-->
-<!--        </section>-->
-<!--        <section class="content" id="content2">-->
-<!--            <h2>Content 2</h2>-->
-<!--            <p>Dit is het tweede inhoudsgebied.</p>-->
-<!--        </section>-->
-<!---->
-<!---->
-<!--    </main>-->
-<!---->
-<!--</body>-->
-<!--<script src="js/myScript.js"></script>-->
-<!--</html>-->
-
 

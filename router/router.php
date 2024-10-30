@@ -3,7 +3,7 @@
 require_once 'controllers/HomeController.php';
 require_once 'controllers/NewPostController.php';
 require_once 'controllers/ContactController.php';
-require_once 'controllers/LoginController.php';
+require_once 'controllers/OvermijController.php';
 require_once 'controllers/PostsController.php';
 
 
@@ -36,10 +36,10 @@ switch ($uri) {
         $controller->index();
         break;
 
-//    case'login':
-//        $controller = new LoginController();
-//        $controller->index();
-//        break;
+    case'overmij':
+        $controller = new OvermijController();
+        $controller->index();
+        break;
 
     case 'register':
         require 'views/register.view.php';

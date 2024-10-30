@@ -24,9 +24,10 @@ class PostsController {
         $stmt->execute();
         $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+
         $view = 'views/posts.view.php';
         require 'views/layout/main.php';
     }
 }
-?>
+
 
