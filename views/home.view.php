@@ -4,6 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webportfolio</title>
     <link rel="stylesheet" href="/views/css/myStyle.css">
+    <link rel="stylesheet" href="/views/css/mediaqueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
 </head>
 <!--<body>-->
@@ -15,8 +18,8 @@
         <ul class="nav-links">
             <li class="hideOnMobile"><a href="/home">Home</a></li>
             <li class="hideOnMobile"><a href="#about">Over mij</a></li>
-            <li class="hideOnMobile"><a href="#portfolio">Portfolio</a></li>
             <li class="hideOnMobile"><a href="#vaardigheden">Vaardigheden</a></li>
+            <li class="hideOnMobile"><a href="#portfolio">Portfolio</a></li>
             <li class="hideOnMobile"><a href="/contact">Contact </a></li>
             <li class="hideOnMobile"><a href="/posts">Posts</a></li>
             <li class="hideOnMobile"><a href="/post">New post</a></li>
@@ -157,7 +160,7 @@
                 </div>
             </div>
         </div>
-        <img src="/views/assets/arrow.jpg" alt="arrow icon" class="icon arrrow" onclick="scrollToSection('#portfolio')">
+        <img src="/views/assets/arrow.jpg" alt="arrow icon" class="icon arrow" onclick="scrollToSection('#portfolio')">
     </section>
     <section id="portfolio">
         <p class="section__text__p1">Browse My Recent</p>
@@ -172,7 +175,7 @@
                         class="project-img"/>
                 </div>
                 <h2 class="experience-sub-title project-title">Project One</h2>
-                <p class="section__text__p1"> My first project is .... , Do you want to know more? Click on Github or live Demo to go to my project </p>
+                <p class="section__text__p1"> My first project is .... , Do you want to know more? Click on GitHub or live Demo to go to my project </p>
                 <div class="btn-container">
                     <button class="btn btn-color-2 project-btn"
                             onclick="location.href='https://github.com/ImranArab07'">
@@ -192,7 +195,7 @@
                         class="project-img"/>
             </div>
             <h2 class="experience-sub-title project-title">Project Two</h2>
-            <p class="section__text__p1"> My Second project is .... , Do you want to know more? Click on Github or live Demo to go to my project </p>
+            <p class="section__text__p1"> My Second project is .... , Do you want to know more? Click on GitHub or live Demo to go to my project </p>
             <div class="btn-container">
                 <button class="btn btn-color-2 project-btn"
                         onclick="location.href='https://github.com/ImranArab07'">
@@ -212,7 +215,7 @@
                         class="project-img"/>
             </div>
             <h2 class="experience-sub-title project-title">Project three</h2>
-            <p class="section__text__p1"> My Third project is .... , Do you want to know more? Click on Github or live Demo to go to my project </p>
+            <p class="section__text__p1"> My Third project is .... , Do you want to know more? Click on GitHub or live Demo to go to my project </p>
             <div class="btn-container">
                 <button class="btn btn-color-2 project-btn"
                         onclick="location.href='https://github.com/ImranArab07'">
@@ -228,10 +231,41 @@
         </div>
         <img
                 src="/views/assets/arrow.jpg"
-                alt="arrow icon" class="icon arrrow"
-                onclick="scrollToSection('#portfolio')">
+                alt="arrow icon" class="icon arrow"
+                onclick="scrollToSection('#footer')">
 
     </section>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <h3> I.Arab Portfolio</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt</p>
+
+            <ul class="socials-footer">
+                <li><a href="https://facebook.com" target="_blank" class="fab fa-facebook-f"></a></li>
+                <li><a href="https://instagram.com" target="_blank" class="fab fa-instagram"></a></li>
+                <li><a href="https://twitter.com" target="_blank" class="fab fa-twitter"></a></li>
+                <li><a href="https://teams.microsoft.com" target="_blank" class="fab fa-microsoft"></a></li>
+            </ul>
+
+            <div class="footer-menu">
+                <ul class="f-menu">
+                    <li><a href="/views/home.view.php">Home</a></li>
+                    <li><a href="#about">Over mij</a></li>
+                    <li><a href="/views/contact.view.php">Contact</a></li>
+                    <li><a href="/posts">Blog posts</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+>
+
+    </footer>
     <script src="/views/js/myScript.js"></script>
 </body>
 

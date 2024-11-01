@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webportfolio</title>
     <link rel="stylesheet" href="/views/css/myStyle.css">
+    <link rel="stylesheet" href="/views/css/mediaqueries.css">
 </head>
 <header>
     <nav id="desktop-nav">
@@ -12,9 +13,9 @@
 
             <ul class="nav-links">
                 <li class="hideOnMobile"><a href="/home">Home</a></li>
-                <li class="hideOnMobile"><a href="#Over mij">Over mij</a></li>
+                <li class="hideOnMobile"><a href="/about">Over mij</a></li>
+                <li class="hideOnMobile"><a href="/vaardigheden">Vaardigheden</a></li>
                 <li class="hideOnMobile"><a href="/portfolio">Portfolio</a></li>
-                <li class="hideOnMobile"><a href="#vaardigheden">Vaardigheden</a></li>
                 <li class="hideOnMobile"><a href="/contact">Contact </a></li>
                 <li class="hideOnMobile"><a href="/posts">Posts</a></li>
                 <li class="hideOnMobile"><a href="/post">New post</a></li>
@@ -34,9 +35,9 @@
             </div>
             <div class="menu-links">
                 <li><a href="/home" onclick="toggleMenu()">Home</a></li>
-                <li><a href="/Over mij" onclick="toggleMenu()">Over mij</a></li>
+                <li><a href="/about" onclick="toggleMenu()">Over mij</a></li>
+                <li><a href="/vaardigheden" onclick="toggleMenu()">Vaardigheden</a></li>
                 <li><a href="/portfolio" onclick="toggleMenu()">Portfolio</a></li>
-                <li><a href="#vaardigheden" onclick="toggleMenu()">Vaardigheden</a></li>
                 <li><a href="/contact" onclick="toggleMenu()">Contact </a></li>
                 <li><a href="/posts" onclick="toggleMenu()">Posts </a></li>
                 <li><a href="/post" onclick="toggleMenu()">New post</a></li>

@@ -1,17 +1,27 @@
 
 function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
+    const menuLinks = document.querySelector(".menu-links");
     const icon = document.querySelector(".hamburger-icon");
-    const overlay = document.querySelector(".menu-overlay")
+    const overlay = document.querySelector(".menu-overlay");
+    const hamburgerIcon=document.querySelector(".hamburger-icon");
     console.log("Menu getoggled!"); // Test of dit werkt
 
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
-    overlay.classList.toggle("open")
+    hamburgerIcon.addEventListener('click', () => {
+        menuLinks.classList.toggle("open");
+        icon.classList.toggle("open");
+        overlay.classList.toggle("show");
+        hamburgerIcon.classList.toggle("open");
+    });
+
+    overlay.addEventListener('click', () => {
+        menuLinks.classList.remove('open');
+        overlay.classList.remove('show');
+        hamburgerIcon.classList.remove('open');
+    });
+
+
+    console.log ("Menu getoggled!")
 }
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const progresses = document.querySelectorAll(".progress");
     progresses.forEach(progress => {
@@ -25,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

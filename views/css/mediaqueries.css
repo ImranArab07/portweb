@@ -1,0 +1,109 @@
+
+@media screen and (max-width: 1400px) {
+    #profile{
+        height: 83vh;
+        margin-bottom: 6rem;
+    }
+    .about-containers {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+    #desktop-nav {
+        display: none;
+    }
+    #hamburger-nav{
+        display: flex;
+    }
+    #vaardigheden, .vaardigheden-details-container{
+      margin-top: 2rem;
+    }
+    #profile, .section-container{
+        display: block;
+    }
+    .arrow{
+        display: none;
+    }
+    section, .section-container{
+        height: fit-content;
+    }
+    section{
+        margin: 0 5%;
+    }
+    .section_pic-container{
+        width: 275px;
+        height: 275px;
+        margin: 0 auto 2rem;
+    }
+    .about-containers {
+        margin-top: 0;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    #about {
+        text-align: center;
+    }
+
+    .section_pic-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-pic {
+        width: 250px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .about-details-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .details-container {
+        text-align: center;
+    }
+}
+
+/* dit is voor de footer */
+@media (max-width: 500px) {
+    .footer-menu ul{
+        display: inline;
+    }
+    .footer-menu ul li{
+        margin-bottom: 20px;
+    }
+}
+
+
+/* dit is voor de contact pagina */
+
+@media (max-width: 991px) {
+    .contact-form{
+        padding: 20px;
+    }
+    .contact-container-form{
+        flex-direction: column;
+    }
+    .contact-container-form, .contactForm {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .contact-container-form .contactInfo-form{
+        margin-bottom: 40px;
+    }
+    .contact-container-form .contactInfo-form,
+    .contactForm{
+        width: 100%;
+    }
+}

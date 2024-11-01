@@ -15,8 +15,6 @@
         scroll-behavior: smooth;
     }
 
-
-
 body {
     font-family: "Poppins", sans-serif;
     line-height: 1.6;
@@ -76,7 +74,7 @@ a:hover{
 .hamburger-menu{
     position: relative;
     display: inline-block;
-    /*z-index: 10;*/
+    z-index: 20;
 }
 .hamburger-icon {
     display: flex;
@@ -94,6 +92,20 @@ a:hover{
     transition: all 0.3s ease-in-out;
 }
 
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Donkere overlay */
+    z-index: 15; /* Overlay direct onder het menu plaatsen */
+    display: none;
+}
+
+.menu-overlay.show {
+    display: block; /* Overlay weergeven wanneer het menu geopend is */
+}
 
 .menu-links{
     position: absolute;
@@ -104,6 +116,7 @@ a:hover{
     max-height: 0;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+    z-index: 20;
 
 
 }
@@ -147,16 +160,14 @@ a:hover{
     transform: none;
 }
 
-
-
-@media screen and (max-width: 1200px) {
-    #desktop-nav {
-        display: none;
-    }
-    #hamburger-nav{
-        display: flex;
-    }
-}
+/*@media screen and (max-width: 1200px) {*/
+/*    #desktop-nav {*/
+/*        display: none;*/
+/*    }*/
+/*    #hamburger-nav{*/
+/*        display: flex;*/
+/*    }*/
+/*}*/
 section {
     padding-top: 4vh;
     height: 96vh;
@@ -401,6 +412,79 @@ position: relative;
     border-color: rgb(163,163,163);
 }
 
+
+/* footer styling */
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: lightgrey;
+    height: auto;
+    padding-top: 40px;
+    width: 100vw;
+    color: white;
+}
+footer p{
+    color: white;
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+footer h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.socials-footer{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials-footer li{
+    margin: 0 10px;
+}
+.socials-footer li a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 8px;
+    border-radius: 50%;
+    width: 35px;
+}
+.footer-menu{
+    margin-bottom: 20px;
+}
+.footer-menu ul{
+    display: flex;
+}
+.footer-menu ul li{
+    padding-right: 10px;
+    display: block;
+}
+.footer-menu ul li a{
+    color: white;
+    border: 1.3px solid white;
+    padding: 6px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+.footer-menu ul li a:hover{
+    color: dimgray;
+}
+
 /* Basisstijl voor de blogpost-box */
 .post-box {
     background-color: #f9f9f9;
@@ -411,6 +495,11 @@ position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
     width: 100%;
+}
+
+/* Alleen voor de navigatie op de posts-pagina */
+body.posts-page .nav-links a:hover {
+    color: white; /* Verandert de tekstkleur naar wit bij hover */
 }
 
 body.posts-page {
@@ -455,7 +544,7 @@ body.posts-page {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url("/views/images/background.jpg") no-repeat center center;
+    background: url("/views/images/black1.jpg") no-repeat center center;
     background-size: cover;
     margin: 0;
 }
@@ -593,98 +682,98 @@ body.posts-page {
     font-size: 18px;
 }
 
-@media (max-width: 991px) {
-    .contact-form{
-        padding: 20px;
-    }
-    .contact-container-form{
-        flex-direction: column;
-    }
-    .contact-container-form, .contactForm {
-        width: 100%;
-        padding: 0 20px;
-    }
-    .contact-container-form .contactInfo-form{
-        margin-bottom: 40px;
-    }
-    .contact-container-form .contactInfo-form,
-    .contactForm{
-        width: 100%;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
+/*@media (max-width: 991px) {*/
+/*    .contact-form{*/
+/*        padding: 20px;*/
+/*    }*/
+/*    .contact-container-form{*/
+/*        flex-direction: column;*/
+/*    }*/
+/*    .contact-container-form, .contactForm {*/
+/*        width: 100%;*/
+/*        padding: 0 20px;*/
+/*    }*/
+/*    .contact-container-form .contactInfo-form{*/
+/*        margin-bottom: 40px;*/
+/*    }*/
+/*    .contact-container-form .contactInfo-form,*/
+/*    .contactForm{*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/
 
     /* post formulier */
 
-    .post-form {
-        max-width: 400px;
-        margin: 0 auto;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #f9f9f9;
-    }
 
-    .post-form-style div {
-        margin-bottom: 15px;
-    }
 
-    .post-form-style label {
-        display: block;
-        margin-bottom: 5px;
+/* Stijl voor de New Post-pagina */
+.post-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("/views/images/black1.jpg");
+    padding: 20px;
+}
 
-    }
+.post-form-wrapper {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+}
 
-    .post-form-style input {
-        width: 100%;
-        padding: 8px;
-        box-sizing: border-box;
-    }
+.post-form-wrapper h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-    .post-form-style button[type="submit"] {
-        padding: 12px 24px;
-        background-color: black;
-        color: white;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-        transition: all 300ms ease;
-        font-size: 1rem;
-        width: 50%;
-        display: block;
-    }
+.post-form-wrapper label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 500;
+}
 
-    .post-form .post-form-style button[type="submit"]:hover {
-        background-color: #333;
-        /*color: white;*/
-    }
+.post-form-wrapper input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
 
-    .post-form-style .main {
-        width: 100%;
-        min-height: 100vh;
-        padding: 20px;
-        margin: 20px auto;
-    }
+.post-form-wrapper input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
 
-    .post-form-style p.content {
+.post-form-wrapper .post-submit {
+    display: flex;
+    justify-content: center;
+}
 
-        padding: 200px;
-        background-color: rgba(255, 255, 255, 0.8);
+.post-form-wrapper button[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    }
-
-    .post-form-style .content img {
-        max-width: 100%;
-
-    }
-
+.post-form-wrapper button[type="submit"]:hover {
+    background-color: #0056b3;
+}
