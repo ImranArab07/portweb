@@ -115,7 +115,7 @@ a:hover{
     width: fit-content;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3s ease-in-out;
+    transition: max-height 0.3s ease;
     z-index: 20;
 
 
@@ -160,14 +160,7 @@ a:hover{
     transform: none;
 }
 
-/*@media screen and (max-width: 1200px) {*/
-/*    #desktop-nav {*/
-/*        display: none;*/
-/*    }*/
-/*    #hamburger-nav{*/
-/*        display: flex;*/
-/*    }*/
-/*}*/
+
 section {
     padding-top: 4vh;
     height: 96vh;
@@ -330,6 +323,40 @@ section {
     margin: auto 0;
 }
 
+/* Standaard styling voor de cards */
+.details-container {
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effect bij hover voor groter scherm */
+.details-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsieve styling voor mobiel */
+@media (max-width: 768px) {
+    .section-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details-container {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    /* Hover effect op mobiel, indien gewenst */
+    .details-container:hover {
+        transform: scale(1.05); /* Iets groter op mobiel voor een subtiel effect */
+    }
+}
+
 
 /* Vaardigheden sectie */
 #vaardigheden {
@@ -412,6 +439,62 @@ position: relative;
     border-color: rgb(163,163,163);
 }
 
+.details-container {
+    position: relative;
+}
+
+.lees-meer-container {
+    display: none; /* Verborgen bij start */
+    position: relative;
+    margin-top: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+/* Lees meer knop */
+.lees-meer-btn {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 1px solid #000;
+    border-radius: 50px; /* Maakt de knop ovaal */
+    background-color: #f8f8f8; /* Achtergrondkleur van de knop */
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lees-meer-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.details-container:hover .lees-meer-container {
+    display: block; /* Verschijnt bij hover */
+    opacity: 1;
+}
+
+.extra-content {
+    display: none; /* Verborgen bij start */
+    /*padding-top: 10px;*/
+    /*overflow: hidden;*/
+    /*max-height: 0;*/
+    /*transition: max-height 0.5s ease;*/
+}
+.extra-content p{
+    color: black;
+}
+
+.details-container.expanded .extra-content {
+    max-height: 500px; /* Pas de hoogte aan op basis van de hoeveelheid content */
+}
 
 /* footer styling */
 footer{

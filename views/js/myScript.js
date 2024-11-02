@@ -1,14 +1,19 @@
 
-function toggleMenu() {
+// function toggleMenu() {
     const menuLinks = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
+    // const icon = document.querySelector(".hamburger-icon");
     const overlay = document.querySelector(".menu-overlay");
     const hamburgerIcon=document.querySelector(".hamburger-icon");
-    console.log("Menu getoggled!"); // Test of dit werkt
+
+    function toggleMenu() {
+        menuLinks.classList.toggle("open");
+        overlay.classList.toggle("show");
+        hamburgerIcon.classList.toggle("open");
+
 
     hamburgerIcon.addEventListener('click', () => {
         menuLinks.classList.toggle("open");
-        icon.classList.toggle("open");
+        // icon.classList.toggle("open");
         overlay.classList.toggle("show");
         hamburgerIcon.classList.toggle("open");
     });
@@ -20,7 +25,7 @@ function toggleMenu() {
     });
 
 
-    console.log ("Menu getoggled!")
+
 }
 document.addEventListener("DOMContentLoaded", function () {
     const progresses = document.querySelectorAll(".progress");
@@ -55,5 +60,37 @@ function scrollToSection(sectionId) {
             behavior: 'smooth'
         });
     }
+
+//
+// function showExtraContent(button) {
+//     const detailsContainer = button.closest(".details-container");
+//     const extraContent = detailsContainer.querySelector(".extra-content");
+//
+//     if (extraContent.style.display === "none" || extraContent.style.display === "") {
+//         extraContent.style.display = "block";
+//         button.textContent = "Lees minder";
+//         detailsContainer.style.height = "auto"; // Laat de container groter worden
+//     } else {
+//         extraContent.style.display = "none";
+//         button.textContent = "Lees meer";
+//         detailsContainer.style.height = ""; // Reset de hoogte
+
 }
+function showExtraContent(button) {
+    // Vind de `extra-content` sectie binnen hetzelfde blok
+    const extraContent = button.parentElement.nextElementSibling;
+
+    console.log("Extra content sectie:", extraContent);
+
+    if (extraContent.style.display === "block") {
+        // Verberg de extra content en verander knop tekst naar 'Lees meer'
+        extraContent.style.display = "none";
+        button.textContent = "Lees meer";
+    } else {
+        // Toon de extra content en verander knop tekst naar 'Lees minder'
+        extraContent.style.display = "block";
+        button.textContent = "Lees minder";
+    }
+}
+
 

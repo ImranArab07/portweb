@@ -81,18 +81,18 @@
             </div>
         </div>
         <div class="contactForm">
-            <form>
+            <form method="POST" action="/contact">
                 <h2>Send Message</h2>
                 <div class="InputBox-contact">
-                    <input type="text" name="" required="required">
+                    <input type="text" name="full_name" required="required">
                     <span>Full Name</span>
                 </div>
                 <div class="InputBox-contact">
-                    <input type="text" name="" required="required">
+                    <input type="email" name="email" required="required">
                     <span>Email</span>
                 </div>
                 <div class="InputBox-contact">
-                    <textarea required="required"></textarea>
+                    <textarea name="message" required="required"></textarea>
                     <span>Type your Message</span>
                 </div>
                 <div class="InputBox-contact">

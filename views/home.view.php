@@ -59,7 +59,7 @@
 
 
         <div class="section__text">
-            <p class="section__text__p1"> Hello I'm</p>
+            <p class="section__text__p1"> Hallo ik ben</p>
             <h1 class="title">Imran Arab</h1>
             <p class="section__text__p2">Software Developer</p>
             <div class="btn-container">
@@ -85,13 +85,28 @@
                 <div class="about-containers">
                     <div class="details-container">
                         <img src="/views/images/experience.jpg" alt="experience icon" class="icon">
-                       <h3>Experience</h3>
-                        <p> 3 Months <br> Frontend Developer</p>
+                       <h3>Mijn Ervaring</h3>
+                        <p> 3 maanden ervaren  <br> Frontend Developer <br> Backend Developer</p>
+                        <div class="lees-meer-container">
+                            <button class="lees-meer-btn" onclick="showExtraContent(this)">Lees meer</button>
+                        </div>
+
+                        <div class="extra-content">
+                            <p>Hier komt meer tekst over mijn ervaring...</p>
+                        </div>
                     </div>
                     <div class="details-container">
                         <img src="/views/assets/educIcon.jpg" alt="Education icon" class="icon">
-                        <h3>Education</h3>
-                        <p> Havo Diploma <br> (current study) AD Software Development</p>
+                        <h3>Onderwijs</h3>
+                        <p> Havo Diploma <br> (huidige studie) AD Software Development</p>
+                        <div class="lees-meer-container">
+                            <button class="lees-meer-btn" onclick="showExtraContent(this)">Lees meer</button>
+                        </div>
+
+                        <!-- Extra content to be shown on button click -->
+                        <div class="extra-content">
+                            <p>Hier komt meer tekst over mijn ervaring...</p>
+                        </div>
                     </div>
                 </div>
                 <div class="text-container">
@@ -109,7 +124,7 @@
                 onclick="scrollToSection('#vaardigheden')">
     </section>
     <section id="vaardigheden">
-       <p class="section__text__p1">Explore my</p>
+       <p class="section__text__p1">Ontdek mijn </p>
         <h1 class="title">Vaardigheden</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -130,12 +145,21 @@
                     <div class="progress-bar">
                         <div class="progress" data-progress="70">70%</div>
                     </div>
+
                 </div>
                 <div>
                     <h3>JavaScript</h3>
                     <div class="progress-bar">
                         <div class="progress" data-progress="60">60%</div>
                     </div>
+                </div>
+                <div class="lees-meer-container">
+                    <button class="lees-meer-btn" onclick="showExtraContent(this)">Lees meer</button>
+                </div>
+
+                <!-- Extra content to be shown on button click -->
+                <div class="extra-content">
+                    <p>Hier komt meer tekst over mijn ervaring...</p>
                 </div>
             </div>
             <div class="details-container">
@@ -157,6 +181,12 @@
                     <div class="progress-bar">
                         <div class="progress" data-progress="75">75%</div>
                     </div>
+                </div>
+                <div class="lees-meer-container">
+                    <button class="lees-meer-btn" onclick="showExtraContent(this)">Lees meer</button>
+                </div>
+                <div class="extra-content">
+                    <p>Hier komt meer tekst over mijn ervaring...</p>
                 </div>
             </div>
         </div>
@@ -186,6 +216,12 @@
                         Live Demo
                     </button>
                 </div>
+                <div class="lees-meer-container">
+                    <button class="lees-meer-btn" onclick="showExtraContent(this)">Lees meer</button>
+                </div>
+                <div class="extra-content">
+                    <p>Hier komt meer tekst over mijn ervaring...</p>
+                </div>
             </div>
         <div class="details-container color-container">
             <div class="article-container">
@@ -205,6 +241,12 @@
                         onclick="location.href='https://github.com/ImranArab07'">
                     Live Demo
                 </button>
+            </div>
+            <div class="lees-meer-container">
+                <button class="lees-meer-btn" onclick="showExtraContent(this)">Lees meer</button>
+            </div>
+            <div class="extra-content">
+                <p>Hier komt meer tekst over mijn ervaring...</p>
             </div>
         </div>
         <div class="details-container color-container">
@@ -226,23 +268,27 @@
                     Live Demo
                 </button>
             </div>
+            <div class="lees-meer-container">
+                <button class="lees-meer-btn" onclick="showExtraContent(this)">Lees meer</button>
+            </div>
+
+            <!-- Extra content to be shown on button click -->
+            <div class="extra-content">
+                <p>Hier komt meer tekst over mijn ervaring...</p>
+            </div>
         </div>
             </div>
         </div>
-        <img
-                src="/views/assets/arrow.jpg"
-                alt="arrow icon" class="icon arrow"
-                onclick="scrollToSection('#footer')">
+<!--        <img-->
+<!--                src="/views/assets/arrow.jpg"-->
+<!--                alt="arrow icon" class="icon arrow"-->
+<!--                onclick="scrollToSection('#footer')">-->
 
     </section>
 
     <footer id="footer">
         <div class="footer-content">
             <h3> I.Arab Portfolio</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt</p>
 
             <ul class="socials-footer">
                 <li><a href="https://facebook.com" target="_blank" class="fab fa-facebook-f"></a></li>
