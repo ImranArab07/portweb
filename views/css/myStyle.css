@@ -107,36 +107,101 @@ a:hover{
     display: block; /* Overlay weergeven wanneer het menu geopend is */
 }
 
-.menu-links{
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: white;
-    width: fit-content;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    z-index: 20;
-
+/* Basisstijl voor het menu */
+.menu-links {
+    position: fixed; /* Vast aan het scherm */
+    top: 0;
+    right: 0; /* Start buiten beeld aan de linkerkant */
+    width: 50%; /* Breedte van het menu */
+    height: 100vh; /* Volledige schermhoogte */
+    background-color: rgba(0,0,0,0.8); /* Menu-achtergrondkleur */
+    /*box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); !* Subtiele schaduw *!*/
+    /*overflow-y: auto;*/
+    /*color: white;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    transform: translateX(100%);
+    transition: transform 0.3s ease; /* Voor vloeiende overgang */
+    z-index: 20; /* Boven de rest van de content */
 
 }
+
+/* Standaard verborgen toestand */
+.menu-links.open {
+    transform: translateX(0); /* Schuift het menu in beeld */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #f1f1f1; /* Lichter bij hover */
+}
+
+
+/*.menu-links{*/
+/*    position: absolute;*/
+/*    top: 100%;*/
+/*    right: 0;*/
+/*    background-color: white;*/
+/*    width: fit-content;*/
+/*    max-height: 0;*/
+/*    overflow: hidden;*/
+/*    transition: max-height 0.3s ease, border-radius 0.3s ease;*/
+/*    z-index: 20;*/
+/*    padding: 0;*/
+/*    border-radius: 20px;*/
+/*    box-shadow: 0 4px 8px rgba( 0,0,0,0.2);*/
+/*    border: 1px solid #ddd;*/
+/*    margin: 0;*/
+
+
+
 .menu-links a{
-    display: block;
-    padding: 10px;
+    /*display: block;*/
+    /*padding: 15px;*/
     text-align: center;
     font-size: 1.5rem;
-    color: black;
+    color: white;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
+    transition: color 0.3s ease;
+
+    .menu-links a:hover {
+        background-color: #f1f1f1; /* Donkerdere grijs bij hover */
+    }
 
 }
 .menu-links li{
     list-style: none;
+    padding: 5px 0;
 }
 
-.menu-links.open{
-    max-height: 300px;
-}
+/*.menu-links.open{*/
+/*    max-height: 700px;*/
+/*    display: block;*/
+/*    visibility: visible;*/
+/*    opacity: 1;*/
+/*    transition: max-height 0.3s ease-in-out;*/
+
+    .menu-links, .hamburger-icon {
+        background-color: transparent;
+        border: none;
+    }
+    .menu-links li, .menu-links a {
+        margin: 0; /* Zorgt dat er geen ongewenste marge is */
+        padding: 10px; /* Pas dit aan naar wens, maar zonder extra spatie */
+        background-color: transparent;
+    }
+
 .hamburger-icon.open span:first-child{
     transform: rotate(45deg) translate(10px, 5px);
 }
@@ -160,6 +225,15 @@ a:hover{
     transform: none;
 }
 
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+
+}
 
 section {
     padding-top: 4vh;

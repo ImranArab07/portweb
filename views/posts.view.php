@@ -29,12 +29,13 @@
         <div class="logo">Imran Arab</div>
         <div class="menu-overlay"></div>
         <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
+            <div class="hamburger-icon" onclick="toggleSidebar()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <div class="menu-links">
+                <span class="close-btn" onclick="toggleMenu()">×</span>
                 <li><a href="/home" onclick="toggleMenu()">Home</a></li>
                 <li><a href="/home#about" onclick="toggleMenu()">Over mij</a></li>
                 <li><a href="/home#vaardigheden" onclick="toggleMenu()">Vaardigheden</a></li>

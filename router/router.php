@@ -26,9 +26,6 @@ switch ($uri) {
         $controller->store();
         break;
 
-    case 'vaardigheden':
-        require 'views/vaardigheden.view.php';
-        break;
 
     case 'contact':
         $controller = new ContactController();

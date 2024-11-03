@@ -31,12 +31,13 @@
         <div class="logo">Imran Arab</div>
         <div class="menu-overlay"></div>
         <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
+            <div class="hamburger-icon" onclick="togglesidebar()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <div class="menu-links">
+                <span class="close-btn" onclick="toggleMenu()">×</span>
                 <li><a href="/home" onclick="toggleMenu()">Home</a></li>
                 <li><a href="#about" onclick="toggleMenu()">Over mij</a></li>
                 <li><a href="#portfolio" onclick="toggleMenu()">Portfolio</a></li>
@@ -92,7 +93,10 @@
                         </div>
 
                         <div class="extra-content">
-                            <p>Hier komt meer tekst over mijn ervaring...</p>
+                            <p> Ik ben nu Ongeveer 3 maanden bezig met Frontend en Backend Development.
+                                Ik begon met de opleiding zonder kennis over programmeren.
+                                Het proces van het leren van de Programeertalen en het begrijpen ervran ging oeizaam aan het begin.
+                                Daarna kreeg ik het besef dat je bij deze opleiding echt veel tijd aan kwijt moet raken.  </p>
                         </div>
                     </div>
                     <div class="details-container">
@@ -110,11 +114,7 @@
                     </div>
                 </div>
                 <div class="text-container">
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                        sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+
                 </div>
             </div>
         </div>
