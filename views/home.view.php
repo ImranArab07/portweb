@@ -257,7 +257,7 @@
                         class="project-img"/>
                 </div>
                 <h2 class="experience-sub-title project-title">Professional Skills </h2>
-                <p class="section__text__p1"> My first project is .... , Do you want to know more? Click on GitHub or live Demo to go to my project </p>
+                <p class="section__text__p1"> My first project is Professional skills </p>
                 <div class="btn-container">
                     <button class="btn btn-color-2 project-btn"
                             onclick="window.open('/views/assets/Profskills.pdf')"> <!-- hier zorgt onclick window.open ervoor dat als ik klik op de button dat er een aparte pagina wordt geopend met de pdf -->
@@ -273,7 +273,7 @@
                         class="project-img"/>
             </div>
             <h2 class="experience-sub-title project-title">SDD Document</h2>
-            <p class="section__text__p1"> My Second project is .... , Do you want to know more? Click on GitHub or live Demo to go to my project </p>
+            <p class="section__text__p1"> My Second project is SDD document, meer weten? klik op live demo </p>
             <div class="btn-container">
                 <button class="btn btn-color-2 project-btn"
                         onclick="window.open('/views/assets/SDD.pdf')"> <!-- hier zorgt onclick window.open ervoor dat als ik klik op de button dat er een aparte pagina wordt geopend met de pdf -->
@@ -289,7 +289,7 @@
                         class="project-img"/>
             </div>
             <h2 class="experience-sub-title project-title">Portfolio Website </h2>
-            <p class="section__text__p1"> My Third project is .... , Do you want to know more? Click on GitHub or live Demo to go to my project </p>
+            <p class="section__text__p1"> My Third project is This website </p>
             <div class="btn-container">
                 <button class="btn btn-color-2 project-btn"
                         onclick="location.href='https://github.com/ImranArab07'">
