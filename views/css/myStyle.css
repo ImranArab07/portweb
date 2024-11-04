@@ -1,112 +1,122 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-
+/* hier reset ik alle basisinstellingen */
 * {
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-    box-sizing: border-box;
+    margin: 0; /* dit verwijdert alle marges rond elementen */
+    padding: 0; /* dit verwijdert alle binnenruimtes rond elementen */
+    border: none; /* dit verwijdert alle randen die zijn ingesteld */
+    outline: none; /* dit verwijdert omringde outlines */
+    box-sizing: border-box; /* dit verwijdert alle marges rond elementen */
 }
-    html, body {
-        height: 100%;
-        overflow-y: scroll;
-        scroll-behavior: smooth;
-    }
+/* hier heb ik instellingen voor de HTML- en body-elementen */
+html, body {
+    height: 100%; /* Zorgt ervoor dat de HTML- en body-elementen de volledige hoogte van het scherm vullen */
+    overflow-y: scroll; /* Stelt in dat de pagina altijd verticaal kan scrollen */
+    scroll-behavior: smooth; /* Maakt scrollen soepel over de pagina */
+}
 
 body {
-    font-family: "Poppins", sans-serif;
-    line-height: 1.6;
-
-
+    font-family: "Poppins", sans-serif; /* hier zet ik de standaardlettertype in op Poppins */
+    line-height: 1.6; /* Zorgt voor een leesbare afstand tussen regels */
 }
+
 body.posts-page {
-    background-color: grey; /* Lichtgrijze achtergrond */
+    background-color: grey; /* Geeft de body een grijze achtergrondkleur op de posts pagina */
 }
 
-p{
-    color: rgb(85, 85, 85);
+p {
+    color: rgb(85, 85, 85); /* Maakt de tekst van de p tag donkergrijs */
 }
 
-/* Transition */
+/* Transition voor links en knoppen */
 
 a,
-.btn{
-    transition: all 300ms ease;
-
+.btn {
+    transition: all 300ms ease; /* Voegt een overgang toe aan links en knoppen voor een vloeiendere  interactie */
 }
+
+/* Algemene opmaak van de navigatie en links */
 nav,
-.nav-links{
-    display: flex;
+.nav-links {
+    display: flex; /* Maakt van de navigatiebalk en linklijst flex containers */
 }
 
-nav{
-    justify-content: space-around;
-    align-items: center;
-    height: 17vh;
+nav {
+    justify-content: space-around; /* verspreidt items evenredig in de navbar */
+    align-items: center; /* zorgt ervoor dat items verticaal in de navbar zijn */
+    height: 17vh; /* Geeft de navigatiebalk een hoogte van 17% van de viewport */
 }
-.nav-links{
-    gap: 2rem;
-    list-style: none;
-    font-size: 1.5rem;
-}
-a{
-    color: black;
-    text-decoration: none;
-    text-decoration-color: white;
-}
-a:hover{
-    color: gray;
-    text-decoration: underline;
-    text-underline-offset: 1rem;
-    text-decoration-color: rgb(181, 181, 181);
 
+.nav-links {
+    gap: 2rem; /* Voegt ruimte toe tussen de navigatielinks */
+    list-style: none; /* Verwijdert de standaard tekens bij lijsten */
+    font-size: 1.5rem; /* Vergroot het lettertype van de navigatielinks */
 }
-.logo{
-    font-size: 2rem;
+
+a {
+    color: black; /* Maakt de kleur van links zwart */
+    text-decoration: none; /* dit verwijdert de standaard onderstreping van links */
+    text-decoration-color: white; /* dit stelt de kleur van de onderstreping in (niet altijd zichtbaar ) */
 }
-.logo:hover{
-    cursor: default;
+
+a:hover {
+    color: gray; /* hier verander ik de kleur van de link naar grijs wanneer erover wordt gehoverd */
+    text-decoration: underline; /* voegt een onderstreping toe bij hover */
+    text-underline-offset: 1rem; /* ik plaats de onderstreping 1 rem van de tekst */
+    text-decoration-color: rgb(181, 181, 181); /* geeft de onderstreping een lichte grijstint */
 }
-#hamburger-nav{
-    display: none;
+
+.logo {
+    font-size: 2rem; /* Vergoot de tekst van de logo-link */
 }
-.hamburger-menu{
-    position: relative;
+
+.logo:hover {
+    cursor: default; /* Zorgt ervoor dat de cursor niet verandert boven de logo-link */
+}
+
+#hamburger-nav {
+    display: none; /* Verbergt de #hamburger-nav standaard */
+}
+
+.hamburger-menu {
+    position: relative; /* door de positie relatief zorg ik ervoor dat de overlay de juiste positie kan innemen */
     display: inline-block;
-    z-index: 20;
+    z-index: 20; /* dit zorgt ervoor dat het boven andere elementen verschijnt */
 }
+
 .hamburger-icon.open {
-    display: none; /* Hide the icon when sidebar is open */
+    display: none; /* dit verbergt het hamburger-icoon wanneer het menu open is */
 }
 
 .hamburger-icon {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 24px;
-    width: 30px;
-    cursor: pointer;
-
-}
-.hamburger-icon span{
-    width: 100%;
-    height: 2px;
-    background-color: black;
-    transition: all 0.3s ease-in-out;
+    height: 24px; /* Stelt de hoogte van het icoon in */
+    width: 30px; /* Stelt de breedte van het icoon in */
+    cursor: pointer; /* Verandert de cursor naar een handje bij hover */
 }
 
+.hamburger-icon span {
+    width: 100%; /* Zorgt ervoor dat de lijnen de volledige breedte van het icoon vullen */
+    height: 2px; /* Stelt de dikte van de lijnen in */
+    background-color: black; /* Maakt de lijnen zwart */
+    transition: all 0.3s ease-in-out; /* Voegt een overgang toe aan de lijnen bij het openen/sluiten */
+}
+
+/* Overlay van het menu */
 .menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: fixed; /* Maakt de overlay vast aan het scherm */
+    top: 0; /* Zet de overlay aan de bovenkant van het scherm */
+    left: 0; /* Zet de overlay aan de linkerkant van het scherm */
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Donkere overlay */
-    z-index: 15; /* Overlay direct onder het menu plaatsen */
-    display: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Maakt de overlay halftransparant donker */
+    z-index: 15; /* Zorgt ervoor dat het onder het hamburger-menu maar boven de meeste andere elementen staat */
+    display: none; /* Verbergt de overlay standaard */
 }
+
 
 .menu-overlay.show {
     display: block; /* Overlay weergeven wanneer het menu geopend is */
@@ -114,15 +124,15 @@ a:hover{
 
 /* Basisstijl voor het menu */
 .menu-links {
-    position: fixed; /* Vast aan het scherm */
+    position: fixed;
     top: 0;
     right: 0; /* Start buiten beeld aan de linkerkant */
     width: 300px; /* Breedte van het menu */
     height: 100vh; /* Volledige schermhoogte */
-    background-color: rgba(0,0,0,0.8); /* Menu-achtergrondkleur */
+    background-color: rgba(0,0,0,0.8);
     transform: translateX(100%);
-    transition: transform 0.3s ease; /* Voor vloeiende overgang */
-    z-index: 20; /* Boven de rest van de content */
+    transition: transform 0.3s ease; /* zorgt voor soepele overgang */
+    z-index: 20;
     padding: 20px;
     box-shadow: -2px 0 5px rgba(0,0,0, 0.5);
 
@@ -175,32 +185,10 @@ a:hover{
     }
     .menu-links li, .menu-links a {
         margin: 0; /* Zorgt dat er geen ongewenste marge is */
-        padding: 10px; /* Pas dit aan naar wens, maar zonder extra spatie */
+        padding: 10px;
         background-color: transparent;
     }
 
-.hamburger-icon.open span:first-child{
-    transform: rotate(45deg) translate(10px, 5px);
-}
-
-.hamburger-icon.open span:nth-child(2){
-    opacity: 0;
-}
-
-.hamburger-icon.open span:last-child{
-    transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child{
-    transform: none;
-}
-
-.hamburger-icon span:first-child{
-    opacity: 1;
-}
-.hamburger-icon span:first-child{
-    transform: none;
-}
 
 .hamburger-icon{
     display: flex;
@@ -212,670 +200,706 @@ a:hover{
 
 }
 
-section {
-    padding-top: 4vh;
-    height: 96vh;
-    margin: 0 10rem;
-    box-sizing: border-box;
-    min-height: fit-content;
-}
-
-.section-container{
-    display: flex;
-
-
-}
-
-/* Profile Section*/
-
-#profile{
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    height: 80vh;
-}
-
-.section_pic-container {
-    display: flex;
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
-
-}
-
-.section__text {
-    align-self: center;
-    text-align: center;
-}
-
-.section__text p {
-    font-weight: 600;
-}
-
-.section__text__p1 {
-    text-align: center;
-
-}
-
-.section__text__p2{
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-}
-
-.title {
-    font-size: 3rem;
-    text-align: center;
-}
-
-#socials-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    gap: 1rem;
-}
-
-/* ICONS */
-
-.icon{
-    cursor: pointer;
-    height: 2rem;
-}
-.btn-container{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-.btn{
-    font-weight: 600;
-    transition: all 300ms ease;
-    padding: 1rem;
-    width: 8rem;
-    border-radius: 2rem;
-}
-
-.btn-color-1,
-.btn-color-2{
-    border: rgb(53, 53, 53 ) 0.1rem solid;
-}
-
-.btn-color-1:hover,
-.btn-color-2:hover{
-    cursor: pointer;
-}
-
-.btn-color-1,
-.btn-color-2:hover {
-    background: rgb(53, 53, 53);
-    color: white;
-}
-.btn-color-1:hover{
-    background: rgb(0,0,0);
-
-}
-.btn-color-2{
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    transition: all 300ms ease;
-}
-.btn-color-2:hover {
-    background-color: black;
-    color: white;
-}
-
-.btn-container{
-    gap: 1rem;
-}
-
-#about{
-    position: relative;
-}
-.about-containers{
-    gap: 2rem;
-    margin-bottom: 3rem;
-    margin-top: 2rem;
-}
-.about-details-container{
-    justify-content: center;
-    flex-direction: column;
-}
-.about-containers,
-.about-details-container{
-    display: flex;
-}
-.about-pic{
-    border-radius: 2rem;
-}
-
-.arrow{
-    position: absolute;
-    right: 2rem;
-    bottom: 2.5rem;
-    cursor: pointer;
-    width: 2rem;
-    height: auto;
-
-}
-
-.details-container{
-    padding: 1.5rem;
-    flex: 1;
-    background: white;
-    border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    /*border-color: rgb(163,163,163);*/
-    text-align: center;
-}
-/*.section-container{*/
-/*    gap: 4rem;*/
-/*    height: 80%;*/
-/*}*/
-.section_pic-container{
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
-}
-
-/* Standaard styling voor de cards */
-.details-container {
-    padding: 1rem;
-    margin: 1rem;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Effect bij hover voor groter scherm */
-.details-container:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-
-
-/* Vaardigheden sectie */
-#vaardigheden {
-  position: relative;
-    margin-bottom: 5rem;
-}
-.vaardigheden-sub-title{
-    color: rgb(85,85,85);
-    font-weight: 600;
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
-
-}
-.vaardigheden-details-container{
-    display: flex;
-    justify-content: center;
-    /*flex-direction: column;*/
-    gap: 2rem;
-}
-.details-container{
-    padding: 1.5rem;
-    flex: 1;
-    background: white;
-    border-radius: 2rem;
-    /*border: rgb(53,53,53) 0.1rem solid;*/
-    /*border-color: rgb(163,163,163);*/
-    text-align: center;
-}
-
-/*progress bar styling */
-.progress-bar{
-position: relative;
-    width: 100%;
-    height: 20px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 10px 0;
-}
-.progress{
-    height: 100%;
-    border-radius: 10px 0 0 10px;
-    color: white;
-    text-align: right;
-    padding-right: 10px;
-    transition: width 0.5s ease, background-color 0.5s ease;
-}
-
-.section-container{
-    gap: 4rem;
-    padding-bottom: 4rem;
-    height: auto;
-}
-.section_pic-container{
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
-}
-
-/*portfolio styling */
-#portfolio{
-    position: relative;
-}
-#portfolio h2 {
-    text-align: center;
-    margin-top: 10px; /* Pas de marge naar wens aan */
-}
-
-.color-container{
-    border-color: rgb(163,163,163);
-    background: rgb(250,250,250);
-}
-
-.portfolio-img{
-    border-radius: 2rem;
-    width: 90%;
-    height: 90%;
-}
-
-.portfolio-title{
-    margin: 1rem;
-    color: black;
-}
-
-.portfolio-btn{
-    color: black;
-    border-color: rgb(163,163,163);
-}
-
-.details-container {
-    position: relative;
-}
-
-.lees-meer-container {
-    display: none; /* Verborgen bij start */
-    position: relative;
-    margin-top: 1rem;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-
-}
-/* Lees meer knop */
-.lees-meer-btn {
-    display: inline-block;
-    padding: 0.5rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border: 1px solid #000;
-    border-radius: 50px; /* Maakt de knop ovaal */
-    background-color: #f8f8f8; /* Achtergrondkleur van de knop */
-    color: #333;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.lees-meer-btn:hover {
-    background-color: #333;
-    color: #fff;
-}
-
-.details-container:hover .lees-meer-container {
-    display: block; /* Verschijnt bij hover */
-    opacity: 1;
-}
-
-.extra-content {
-    display: none;
-}
-.extra-content p{
-    color: black;
-}
-
-.details-container.expanded .extra-content {
-    max-height: 500px; /* Pas de hoogte aan op basis van de hoeveelheid content */
-}
-
-/* footer styling */
-footer{
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: lightgrey;
-    height: auto;
-    padding-top: 40px;
-    width: 100vw;
-    color: white;
-}
-footer p{
-    color: white;
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
-
-}
-.footer-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-footer h3{
-    font-size: 2.1rem;
-    font-weight: 500;
-    text-transform: capitalize;
-    line-height: 3rem;
-}
-.socials-footer{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;
-}
-.socials-footer li{
-    margin: 0 10px;
-}
-.socials-footer li a{
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid white;
-    padding: 8px;
-    border-radius: 50%;
-    width: 35px;
-}
-.footer-menu{
-    margin-bottom: 20px;
-}
-.footer-menu ul{
-    display: flex;
-}
-.footer-menu ul li{
-    padding-right: 10px;
-    display: block;
-}
-.footer-menu ul li a{
-    color: white;
-    border: 1px solid white;
-    padding: 6px 15px;
-    border-radius: 50px;
-    text-decoration: none;
-}
-.footer-menu ul li a:hover{
-    color: dimgray;
-}
-
-/* Basisstijl voor de blogpost-box */
-.post-box {
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-    width: 100%;
-}
-
-/* Alleen voor de navigatie op de posts-pagina */
-body.posts-page .nav-links a:hover {
-    color: white; /* Verandert de tekstkleur naar wit bij hover */
-}
-
-body.posts-page {
-    background-color: grey; /* Lichtgrijze achtergrond */
-}
-.post-box:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Stijl voor de post-titel */
-.post-box h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Stijl voor de post-content */
-.post-box p {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-/* Stijl voor de auteur en datum */
-.post-box .post-meta {
-    font-size: 0.9rem;
-    color: #999;
-    margin-top: 15px;
-    text-align: right;
-    padding-right: 5px;
-}
-
-
-
-/* contact formulier */
-
-.contact-form {
-    position: relative;
-    width: 100vw;
-    min-height: 100vh;
-    padding: 50px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: url("/views/images/black1.jpg") no-repeat center center;
-    background-size: cover;
-    margin: 0;
-}
-
-
-
-
-.contact-box-form p {
-    color: #fff;
-}
-
-.contact-form .content-contact-form{
-    max-width: 800px;
-    text-align: center;
-}
-
-.contact-form .content-contact-form h2{
-    font-size: 36px;
-    font-weight: 500;
-    color: #fff;
-}
-
-.contact-form .content-contact-form p{
-
-    font-weight: 500;
-    color: #fff;
-}
-
-.contact-container-form{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    padding: 0 ;
-    max-width: 1200px;
-
-}
-.contact-container-form  .contactInfo-form{
-    width: 50%;
-    max-width: 1200px;
-
-}
-.contact-container-form .contactForm {
-    width: 50%;
-}
-
-
-.contact-container-form .contactInfo-form,
-.contact-container-form .contactForm {
-    margin: 0 2rem; /* Dit voegt aan beide zijkanten ruimte toe */
-}
-
-.contact-container-form  .contactInfo-form .contact-box-form{
-    position: relative;
-    padding: 20px 0;
-    display: flex;
-}
-.contact-container-form  .contactInfo-form .contact-box-form .contact-icon{
-    min-width: 60px;
-    height: 60px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 22px;
-}
-.contact-container-form  .contactInfo-form .contact-box-form .contact-text{
-    display: flex;
-    margin-left: 20px;
-    font-size: 16px;
-    color: #fff;
-    flex-direction: column;
-    font-weight: 300;
-}
-.contact-container-form  .contactInfo-form .contact-box-form .contact-text h3{
-    font-weight: 500;
-    color: #00bcd4;
-}
-
-.contactForm{
-    width: 40%;
-    padding: 40px;
-    background: #fff;
-}
-
-.contactForm h2{
-    font-size: 30px;
-    color: #333;
-    font-weight: 500;
-}
-.contactForm .InputBox-contact{
-    position: relative;
-    width: 100%;
-    margin-top: 10px;
-}
-.contactForm .InputBox-contact input,
-.contactForm .InputBox-contact textarea{
-    width: 100%;
-    padding: 5px 0;
-    font-size: 16px;
-    margin: 10px 0;
-    border: none;
-    border-bottom: 2px solid;
-    outline: none;
-    resize: none;
-}
-.contactForm .InputBox-contact span{
-    position: absolute;
-    left: 0;
-    padding: 5px 0;
-    font-size: 16px;
-    margin: 10px 0;
-    pointer-events: none;
-    transition: 0.5s;
-    color: #666;
-}
-
-.contactForm .InputBox-contact input:focus ~ span,
-.contactForm .InputBox-contact input:valid ~ span,
-.contactForm .InputBox-contact textarea:focus ~ span,
-.contactForm .InputBox-contact textarea:valid ~ span{
-    color: #e91e63;
-    font-size: 12px;
-    transform: translateY(-20px);
-}
-.contactForm .InputBox-contact input[type="submit"]{
-    width: 100px;
-    background: #00bcd4;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 18px;
-}
 
+    section {
+        padding-top: 4vh;  /* hier voeg ik ruimte toe boven de sectie */
+        height: 96vh;  /* neemt 96% van de viewpoort hoogte in */
+        margin: 0 10rem;  /* Geeft horizontale marge van 10 rem links en rechts */
+        box-sizing: border-box;
+        min-height: fit-content; /* Stelt de minimumhoogte in, afhankelijk van de inhoud */
+    }
+
+    .section-container{
+        display: flex;
+
+
+    }
+
+    /* Profile Section*/
+
+    #profile{
+        display: flex;
+        justify-content: center; /* Centreert de inhoud horizontaal */
+        gap: 5rem;
+        height: 80vh;
+    }
+
+    .section_pic-container {
+        display: flex; /* Maakt de afbeelding-container een flex-container */
+        height: 400px;
+        width: 400px;
+        margin: auto 0; /* Centreert de container verticaal */
+
+    }
+
+    .section__text {
+        align-self: center;  /* Centreert de tekst verticaal in de flex-container */
+        text-align: center; /* Centreert de tekst horizontaal */
+    }
+
+    .section__text p {
+        font-weight: 600; /* Maakt de tekst vetter */
+    }
+
+    .section__text__p1 {
+        text-align: center; /* Centreert de tekst in die <p> tag*/
+
+    }
+
+    .section__text__p2{
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .title {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    #socials-container{
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+
+    /* ICONS */
+
+    .icon{
+        cursor: pointer; /* Verandert de cursor naar een handje bij hover */
+        height: 2rem;
+    }
+    .btn-container{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .btn{
+        font-weight: 600;
+        transition: all 300ms ease;
+        padding: 1rem; /* Geeft de knoppen een padding tussen de tekst */
+        width: 8rem;
+        border-radius: 2rem;  /* Geeft de knoppen afgeronde hoeken */
+    }
+
+    .btn-color-1,
+    .btn-color-2{
+        border: rgb(53, 53, 53 ) 0.1rem solid; /* Geeft de knoppen een donkergrijze rand */
+    }
+
+    .btn-color-1:hover,
+    .btn-color-2:hover{
+        cursor: pointer;
+    }
+
+    .btn-color-1,
+    .btn-color-2:hover {
+        background: rgb(53, 53, 53);
+        color: white;
+    }
+    .btn-color-1:hover{
+        background: rgb(0,0,0);  /* Verandert de knop naar zwart bij het hoveren over de knop */
+
+    }
+    .btn-color-2{
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        transition: all 300ms ease;
+    }
+    .btn-color-2:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .btn-container{
+        gap: 1rem;
+    }
+
+    #about{
+        position: relative;  /*  element blijft bij zijn plek zonder positionering */
+    }
+    .about-containers{
+        gap: 2rem;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+    }
+    .about-details-container{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .about-containers,
+    .about-details-container{
+        display: flex;
+    }
+    .about-pic{
+        border-radius: 2rem;
+
+
+    }
+
+    .arrow {
+        position: absolute;
+        right: 2rem;
+        bottom: 2.5rem;
+        cursor: pointer;
+        width: 2rem;
+        height: auto;
+
+    }
+
+    .details-container {
+        padding: 1.5rem;
+        flex: 1;
+        background: white;
+        border-radius: 2rem;
+        border: rgb(53, 53, 53) 0.1rem solid;
+
+        text-align: center;
+    }
+
+
+    .section_pic-container {
+        height: auto;
+        margin: auto 0;
+        max-width: 80%;
+
+
+    }
+
+    /* Standaard styling voor de cards */
+
+    .details-container {
+        padding: 1rem;
+        margin: 1rem;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* zorgt voor een subtiele schaduw */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Effect bij hover voor groter scherm */
+
+    .details-container:hover {
+        transform: translateY(-10px); /* dit tilt de kaarten een beetje op bij het hoveren */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+
+    /* Vaardigheden sectie */
+
+    #vaardigheden {
+        position: relative;
+        margin-bottom: 5rem;
+    }
+
+    .vaardigheden-sub-title {
+        color: rgb(85, 85, 85);
+        font-weight: 600;
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+
+    }
+
+    .vaardigheden-details-container {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .details-container {
+        padding: 1.5rem;
+        flex: 1;
+        background: white;
+        border-radius: 2rem;
+        text-align: center;
+    }
+
+    /*progress bar styling */
+
+    .progress-bar {
+        position: relative;
+        width: 100%;
+        height: 20px;
+        background-color: #f0f0f0;
+        border-radius: 10px;/* maakt de hoeken ovaal */
+        overflow: hidden; /* verbergt overloop van elementen die binnen zitten */
+        margin: 10px 0;
+    }
+
+    .progress {
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+        color: white;
+        text-align: right;
+        padding-right: 10px;
+        transition: width 0.5s ease, background-color 0.5s ease; /* soepele overgang voor de breedte en kleur */
+    }
+
+    .section-container {
+        gap: 4rem;
+        padding-bottom: 4rem;
+        height: auto;
+    }
+
+    .section_pic-container {
+        height: 400px;
+        width: 400px;
+        margin: auto 0;
+    }
+
+    /*portfolio styling */
+
+    #portfolio {
+        position: relative;
+    }
+
+    #portfolio h2 {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .color-container {
+        border-color: rgb(163, 163, 163);
+        background: rgb(250, 250, 250);
+    }
+
+    .portfolio-img {
+        border-radius: 2rem;
+        width: 90%; /* verkleint de breedte van de afbeelding */
+        height: 90%; /* verkleint de hoogte van de afbeelding */
+    }
+
+    .portfolio-title {
+        margin: 1rem;
+        color: black;
+    }
+
+    .portfolio-btn {
+        color: black;
+        border-color: rgb(163, 163, 163);
+    }
+
+    .details-container {
+        position: relative;
+    }
+
+    .lees-meer-container {
+        display: none; /* Verborgen bij start */
+        position: relative;
+        margin-top: 1rem;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+    }
+
+    /* Lees meer knop */
+
+    .lees-meer-btn {
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: 1px solid #000;
+        border-radius: 50px; /* Maakt de knop ovaal */
+        background-color: #f8f8f8; /* Achtergrondkleur van de knop */
+        color: #333;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .lees-meer-btn:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .details-container:hover .lees-meer-container {
+        display: block; /* Verschijnt bij hover */
+        opacity: 1; /* volledig zichtbaar maken */
+    }
+
+    .extra-content {
+        display: none;
+    }
+
+    .extra-content p {
+        color: black;
+    }
+
+    .details-container.expanded .extra-content {
+        max-height: 500px; /* Pas de hoogte aan op basis van de hoeveelheid content */
+    }
+
+    /* footer styling */
+
+    footer {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: lightgrey;
+        height: auto;
+        padding-top: 40px;
+        width: 100vw; /* bpakt de volledige breedte van de viewpoort */
+        color: white;
+    }
+
+    footer p {
+        color: white;
+        max-width: 500px;
+        margin: 10px auto;
+        line-height: 28px;
+        font-size: 14px;
+
+    }
+
+    .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; /* stapelt de items verticaal */
+        text-align: center;
+    }
+
+    footer h3 {
+        font-size: 2.1rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        line-height: 3rem;
+    }
+
+    .socials-footer {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0 3rem 0; /* maakt de ruimte rondom de icons */
+    }
+
+    .socials-footer li {
+        margin: 0 10px;
+    }
+
+    .socials-footer li a {
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid white;
+        padding: 8px;
+        border-radius: 50%; /* geeft de border een Cirkelvorm */
+        width: 35px;
+    }
+
+    .footer-menu {
+        margin-bottom: 20px;
+    }
+
+    .footer-menu ul {
+        display: flex;
+    }
+
+    .footer-menu ul li {
+        padding-right: 10px;
+        display: block;
+    }
+
+    .footer-menu ul li a {
+        color: white;
+        border: 1px solid white;
+        padding: 6px 15px;
+        border-radius: 50px;
+        text-decoration: none;
+    }
+
+    .footer-menu ul li a:hover {
+        color: dimgray;
+    }
+
+    /* Basisstijl voor de blogpost-box */
+
+    .post-box {
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+        width: 100%;
+    }
+
+    /* Alleen voor de navigatie op de posts-pagina */
+
+    body.posts-page .nav-links a:hover {
+        color: white; /* Verandert de tekstkleur naar wit bij hover */
+    }
+
+    body.posts-page {
+        background-color: grey; /* Lichtgrijze achtergrond */
+    }
+
+    .post-box:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Stijl voor de post-titel */
+
+    .post-box h2 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    /* Stijl voor de post-content */
+
+    .post-box p {
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    /* Stijl voor de auteur en datum */
+
+    .post-box .post-meta {
+        font-size: 0.9rem;
+        color: #999;
+        margin-top: 15px;
+        text-align: right;
+        padding-right: 5px;
+    }
+
+
+    /* contact formulier */
+
+    .contact-form {
+        position: relative;
+        width: 100vw;
+        min-height: 100vh;
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: url("/views/images/black1.jpg") no-repeat center center; /* maakt de achtergrondafbeelding gesentreerd */
+        background-size: cover; /* zorgt ervoor dat de afbeelding volledige achtergrond bedekt */
+        margin: 0;
+    }
+
+
+    .contact-box-form p {
+        color: #fff;
+    }
+
+    .contact-form .content-contact-form {
+        max-width: 800px;
+        text-align: center;
+    }
+
+    .contact-form .content-contact-form h2 {
+        font-size: 36px;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .contact-form .content-contact-form p {
+
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .contact-container-form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        padding: 0;
+        max-width: 1200px;
+
+    }
+
+    .contact-container-form .contactInfo-form {
+        width: 50%;
+        max-width: 1200px;
+
+    }
+
+    .contact-container-form .contactForm {
+        width: 50%; /* neemt 50% van de breedte in beslag */
+    }
+
+
+    .contact-container-form .contactInfo-form,
+    .contact-container-form .contactForm {
+        margin: 0 2rem; /* Dit voegt aan beide zijkanten ruimte toe */
+    }
+
+    .contact-container-form .contactInfo-form .contact-box-form {
+        position: relative;
+        padding: 20px 0;
+        display: flex;
+    }
+
+    .contact-container-form .contactInfo-form .contact-box-form .contact-icon {
+        min-width: 60px;
+        height: 60px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%; /* maakt iconen rond */
+        font-size: 22px;
+    }
+
+    .contact-container-form .contactInfo-form .contact-box-form .contact-text {
+        display: flex;
+        margin-left: 20px;
+        font-size: 16px;
+        color: #fff;
+        flex-direction: column;
+        font-weight: 300;
+    }
+
+    .contact-container-form .contactInfo-form .contact-box-form .contact-text h3 {
+        font-weight: 500;
+        color: #00bcd4;
+    }
+
+    .contactForm {
+        width: 40%;
+        padding: 40px;
+        background: #fff;
+    }
+
+    .contactForm h2 {
+        font-size: 30px;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .contactForm .InputBox-contact {
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .contactForm .InputBox-contact input,
+    .contactForm .InputBox-contact textarea {
+        width: 100%;
+        padding: 5px 0; /* dit zorgt voor de verticale padding binnen het veld */
+        font-size: 16px;
+        margin: 10px 0;
+        border: none;
+        border-bottom: 2px solid;
+        outline: none;
+        resize: none; /* zorgt ervoor dt het formaat van de tekst gebieden niet kunnen wijzigen */
+    }
+
+    .contactForm .InputBox-contact span {
+        position: absolute;
+        left: 0;
+        padding: 5px 0;
+        font-size: 16px;
+        margin: 10px 0;
+        pointer-events: none; /* negeert de muiskliiken */
+        transition: 0.5s;
+        color: #666;
+    }
+
+    .contactForm .InputBox-contact input:focus ~ span,
+    .contactForm .InputBox-contact input:valid ~ span,
+    .contactForm .InputBox-contact textarea:focus ~ span,
+    .contactForm .InputBox-contact textarea:valid ~ span {
+        color: #e91e63;
+        font-size: 12px; /* verkleint de tekst */
+        transform: translateY(-20px); /* verschuift de tekst omhoog */
+    }
+
+    .contactForm .InputBox-contact input[type="submit"] {
+        width: 100px;
+        background: #00bcd4;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 18px;
+    }
 
 
     /* post formulier */
 
 
+    /* Stijl voor de New Post-pagina */
 
-/* Stijl voor de New Post-pagina */
-.post-page-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: url("/views/images/black1.jpg");
-    padding: 20px;
-}
+    .post-page-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: url("/views/images/black1.jpg");
+        padding: 20px;
+    }
 
-.post-form-wrapper {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    max-width: 500px;
-    width: 100%;
-    padding: 30px;
-}
+    .post-form-wrapper {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        max-width: 500px;
+        width: 100%;
+        padding: 30px;
+    }
 
-.post-form-wrapper h2 {
-    font-size: 24px;
-    font-weight: 600;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-}
+    .post-form-wrapper h2 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-.post-form-wrapper label {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 8px;
-    display: block;
-    font-weight: 500;
-}
+    .post-form-wrapper label {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 8px; /* ruimte tussen de label en invoerveld */
+        display: block;
+        font-weight: 500;
+    }
 
-.post-form-wrapper input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-}
+    .post-form-wrapper input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
 
-.post-form-wrapper input[type="text"]:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
-    outline: none;
-}
+    .post-form-wrapper input[type="text"]:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.2); /* voert een blauwe schaduw tussen effect toe */
+        outline: none;
+    }
 
-.post-form-wrapper .post-submit {
-    display: flex;
-    justify-content: center;
-}
+    .post-form-wrapper .post-submit {
+        display: flex;
+        justify-content: center;
+    }
 
-.post-form-wrapper button[type="submit"] {
-    background-color: #007bff;
-    color: #ffffff;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: 500;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+    .post-form-wrapper button[type="submit"] {
+        background-color: #007bff;
+        color: #ffffff;
+        padding: 12px 20px; /* maakt de kno[ groter en leesbaarder */
+        font-size: 16px;
+        font-weight: 500;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 
-.post-form-wrapper button[type="submit"]:hover {
-    background-color: #0056b3;
-}
+    .post-form-wrapper button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
 
 

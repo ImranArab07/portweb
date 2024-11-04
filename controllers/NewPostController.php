@@ -55,15 +55,6 @@ class NewPostController
     }
 }
 
-//    } else {
-//        require 'views/post.view.php';
-//    }
-//} catch (PDOException $e) {
-//    // Foutmelding tonen als er iets misgaat
-//    $message = "Fout bij het verbinden met de database: " . $e->getMessage();
-//    require 'views/post.view.php';
-//}
-
 
 
 ?>

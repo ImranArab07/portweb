@@ -1,8 +1,10 @@
+<!--dit is mijn html file met alles wat mijn homepage bevat-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webportfolio</title>
+    <!-- deze links zorgen ervoor dat ik mijn css en media.css kan gebruiken om de layout van mijn website te laten werken en ook om de responsiviteit -->
     <link rel="stylesheet" href="/views/css/myStyle.css">
     <link rel="stylesheet" href="/views/css/mediaqueries.css">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -10,13 +12,15 @@
 
 </head>
 
+<!--hier begint de header-->
 <header>
     <nav id="desktop-nav">
         <div class="logo">Imran Arab</div>
         <div>
 
         <ul class="nav-links">
-            <li class="hideOnMobile"><a href="/home">Home</a></li>
+            <!--dit zijn de links naar verschillende pagina's op secties -->
+            <li class="hideOnMobile"><a href="/home">Home</a></li>  <!-- hideonmobile zorgt ervoor dat de links niet te zien zijn op telefoon -->
             <li class="hideOnMobile"><a href="#about">Over mij</a></li>
             <li class="hideOnMobile"><a href="#vaardigheden">Vaardigheden</a></li>
             <li class="hideOnMobile"><a href="#portfolio">Portfolio</a></li>
@@ -27,11 +31,12 @@
         </ul>
         </div>
     </nav>
+<!--    de hamburger menu is er voor dat als het scherm te klein is voor de link in de navbar is er een hamburger menu met de links erin-->
     <nav id="hamburger-nav">
         <div class="logo">Imran Arab</div>
         <div class="menu-overlay"></div>
         <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
+            <div class="hamburger-icon" onclick="toggleMenu()"> <!-- de toggleMenu wordt gebruikt om het hamburgermenu te openen -->
                 <span></span>
                 <span></span>
                 <span></span>
@@ -50,13 +55,12 @@
         </div>
     </nav>
 </header>
+<!-- eindigt de header en begint de body -->
 <body>
     <section id="profile">
 
         <div class="section_pic-container">
-            <img src="/views/images/Imran.png" alt="Imran Arab profile picture">
-        </div>
-
+            <img src="/views/images/Imran.png" alt="Imran Arab profile picture"> </div <!-- met image src kan je een afbeelding plaatsen in je website -->
 
 
         <div class="section__text">
@@ -64,10 +68,12 @@
             <h1 class="title">Imran Arab</h1>
             <p class="section__text__p2">Software Developer</p>
             <div class="btn-container">
+                <!-- de button wordt gebruikt oom een knop te krijgen waar je op kan klikken -->
             <button class="btn btn-color-2" onclick="window.open('/views/assets/cv imran.docx.pdf')">Download cv</button>
-            <button class="btn btn-color-1" onclick="location.href='./views/contact.view.php'">Contact info</button>
+            <button class="btn btn-color-1" onclick="location.href='./views/contact.view.php'">Contact info</button> <!-- location href geeft aan bij welke locatie in je project de server moet gaan als je op die button klikt -->
         </div>
         <div id="socials-container">
+            <!-- hier zorgt de locatie href ervoor dat als er op de icon van teams of github wordt geklik dat het je stuurt naar mijn github of teams profiel -->
             <img src="/views/assets/teamss.jpg" alt="My Teams profile"
                  class="icon" onclick="location.href='https://teams.microsoft.com/v2/'"/>
 
@@ -76,22 +82,24 @@
         </div>
     </section>
 
-
+<!-- hier begint de sectie over mij -->
     <section id="about">
        <p class="section__text__p1"> Kom Meer Over Mij Te Weten</p>
         <h1 class="title">Over mij</h1>
         <div class="section-container">
-            <div class="section_pic-container">
-                <img src="/views/images/Arab.jpeg" alt="Profile picture" class="about-pic"/>
+            <div class="Overmij_pic-container">
+                <!-- hier wordt met de img src, de afbeelding uit mijn imahes map geselecterd -->
+                <img src="/views/images/Arab.jpeg" alt="Profile picture" class="about-pic responsive-image"/>
                 </div>
             <div class="about-details-container">
                 <div class="about-containers">
                     <div class="details-container">
+
                         <img src="/views/images/experience.jpg" alt="experience icon" class="icon">
                        <h3>Mijn Ervaring</h3>
-                        <p> 3 maanden ervaren  <br> Frontend Developer <br> Backend Developer</p>
+                        <p> 3 maanden ervaren  <br> Frontend Developer <br> Backend Developer</p> <!--  <br> tag zorgt ervoor dat er een enter komt tussen de tekst zodat de tekst eronder komt -->
                         <div class="lees-meer-container">
-                            <button class="lees-meer-btn" onclick="showExtraContent(this)">Lees meer</button>
+                            <button class="lees-meer-btn" onclick="showExtraContent(this)">Lees meer</button> <!-- deze lees meer button wordt geactiveerd met de onclick showExtraContent en die zorgt ervoor dat als je op lees meer komt er extra tekst komt die je in de <p> tag heb geschreven -->
                         </div>
 
                         <div class="extra-content">
@@ -104,12 +112,12 @@
                     <div class="details-container">
                         <img src="/views/assets/educIcon.jpg" alt="Education icon" class="icon">
                         <h3>Onderwijs</h3>
-                        <p> Havo Diploma <br> (huidige studie) AD Software Development</p>
+                        <p> Havo Diploma <br> AD Software Development</p>
                         <div class="lees-meer-container">
                             <button class="lees-meer-btn" onclick="showExtraContent(this)">Lees meer</button>
                         </div>
 
-                        <!-- Extra content to be shown on button click -->
+                        <!-- Extra content dat wordt laten zien als je op de button klikt -->
                         <div class="extra-content">
                             <p>Ik heb op het Baken Park Lyceum havo gedaan.
                                 Na 5 jaar heb ik mijn havo diploma gehaald.
@@ -124,12 +132,14 @@
                 </div>
             </div>
         </div>
+        <!-- deze arrow icon is bedoeld is om naar de volgende sectie te gaan in mijn pagina, de onclick scrollToSection zorgt ervoor dat als je op de pijl klikt het naar de volgende sectie gaat. -->
         <img
                 src="/views/assets/arrow.jpg"
                 alt="arrow icon" class="icon arrow"
                 onclick="scrollToSection('#vaardigheden')">
     </section>
 
+    <!-- hier begint de sectie vaardigheden -->
 
     <section id="vaardigheden">
        <p class="section__text__p1">Ontdek mijn </p>
@@ -140,8 +150,9 @@
                 <h2 class="vaardigheden-sub-title">Frontend Development</h2>
                 <div>
                     <h3>HTML</h3>
+                    <!-- de progress bar is een tool die je kan maken met javascript en css die aangeeft hoe goed je iets beheerst -->
                     <div class="progress-bar">
-                        <div class="progress" data-progress="60">60%</div>
+                        <div class="progress" data-progress="60">60%</div> <!-- door met data progress aan te geven hoe goed ik iets beheers, kan ik dan in javascript aangeven wat met die waarde gedaan moet worden -->
                     </div>
                 </div>
                 <div>
@@ -161,9 +172,9 @@
                     <button class="lees-meer-btn" onclick="showExtraContent(this)">Lees meer</button>
                 </div>
 
-                <!-- Extra content to be shown on button click -->
+                <!-- Dit is extra content wat je ziet als je op lees meer button klikt -->
                 <div class="extra-content">
-                    <p> <strong> HTML:</strong> Het begin, Toen ik aan mijn opleiding begon, zijn me begonnen met het leren van Html.
+                    <p> <strong> HTML:</strong> Het begin, Toen ik aan mijn opleiding begon, zijn me begonnen met het leren van Html. <!-- <strong> zorgt ervoor dat de tekst die tussen die tag staat dikgedrukt is -->
                         Ik vond dit toch wel makkelijk om te leren alhoewel ik wel eerst achter liep met programmeren omdat ik niet echt de motivatie had tijdens de lessen,
                         vind ik wel dat ik html nu echt wel goed beheers. Dit komt ook door dat we dit project hebben gekregen om een website te bouwen dat heeft me ook geholpen bij het kennen en kunnen toepassen van html.
                         Ook heb ik veel geleerd op Codecademy. <br> <br> <br> <strong> CSS:</strong> Na HTML zijn we gaan leren hoe we onze website moeten stijlen en dat doe je met CSS.
@@ -224,21 +235,24 @@
                 </div>
             </div>
         </div>
+            <!-- hier zorgt de scrollToSection ervoor dat als ik op de arrow icon klik dat ik naar de sectie portfolio ga. -->
         <img src="/views/assets/arrow.jpg" alt="arrow icon" class="icon arrow" onclick="scrollToSection('#portfolio')">
     </section>
+
+    <!-- hier begint de portfolio sectie -->
 
 
     <section id="portfolio">
         <p class="section__text__p1">Browse My Recent</p>
         <h1 class="title">Portfolio</h1>
-        <h2> <em> Mijn Projecten: </em> </h2>
+        <h2> <em> Mijn Projecten: </em> </h2> <!-- <em> tag zorgt ervoor dat de tekst tussen de tag schuingedrukt wordt. -->
 
         <div class="experience-details-container">
             <div class="about-containers">
             <div class="details-container color-container" >
                 <div class="article-container">
                     <img
-                        src="/views/images/Project1.jpg"
+                        src="/views/images/Prof.jpg"
                         alt="Portfolio project 1"
                         class="project-img"/>
                 </div>
@@ -246,7 +260,7 @@
                 <p class="section__text__p1"> My first project is .... , Do you want to know more? Click on GitHub or live Demo to go to my project </p>
                 <div class="btn-container">
                     <button class="btn btn-color-2 project-btn"
-                            onclick="window.open('/views/assets/Profskills.pdf')">
+                            onclick="window.open('/views/assets/Profskills.pdf')"> <!-- hier zorgt onclick window.open ervoor dat als ik klik op de button dat er een aparte pagina wordt geopend met de pdf -->
                         Live Demo
                     </button>
                 </div>
@@ -254,7 +268,7 @@
         <div class="details-container color-container" >
             <div class="article-container">
                 <img
-                        src="/views/images/Project2.jpg"
+                        src="/views/images/ssd3.png"
                         alt="Portfolio project 2"
                         class="project-img"/>
             </div>
@@ -262,7 +276,7 @@
             <p class="section__text__p1"> My Second project is .... , Do you want to know more? Click on GitHub or live Demo to go to my project </p>
             <div class="btn-container">
                 <button class="btn btn-color-2 project-btn"
-                        onclick="window.open('/views/assets/SDD.pdf')">
+                        onclick="window.open('/views/assets/SDD.pdf')"> <!-- hier zorgt onclick window.open ervoor dat als ik klik op de button dat er een aparte pagina wordt geopend met de pdf -->
                     Live Demo
                 </button>
             </div>
@@ -270,7 +284,7 @@
         <div class="details-container color-container" >
             <div class="article-container">
                 <img
-                        src="/views/images/Project3.jpg"
+                        src="/views/images/port.png"
                         alt="Portfolio project 3"
                         class="project-img"/>
             </div>
@@ -293,6 +307,7 @@
             <h3> I.Arab Portfolio</h3>
 
             <ul class="socials-footer">
+                <!-- hier zorgt de href ervoor dat ik naar die site wordt gestuurd, target blank zorgt ervoor dat het een nieuw tabblad opent fab geeft aan dat het een pictogram is en wat er na komt, is de naam van het pictogram-->
                 <li><a href="https://facebook.com" target="_blank" class="fab fa-facebook-f"></a></li>
                 <li><a href="https://instagram.com" target="_blank" class="fab fa-instagram"></a></li>
                 <li><a href="https://twitter.com" target="_blank" class="fab fa-twitter"></a></li>
@@ -302,6 +317,7 @@
 
             <div class="footer-menu">
                 <ul class="f-menu">
+                    <!-- deze linkjes sturen je naar de juiste sectie of pagina van mijn website -->
                     <li><a href="/views/home.view.php">Home</a></li>
                     <li><a href="#about">Over mij</a></li>
                     <li><a href="/views/contact.view.php">Contact</a></li>
@@ -315,6 +331,7 @@
 >
 
     </footer>
+    <!-- hier link ik mijn html met mijn javascript file zodat de javascript functies werken -->
     <script src="/views/js/myScript.js"></script>
 </body>
 

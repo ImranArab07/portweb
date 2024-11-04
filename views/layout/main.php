@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/views/css/mediaqueries.css">
 </head>
 <body>
-<?php include 'header.php';?>
+
 <main>
     <?php
     if (isset($view) && file_exists($view)) {
