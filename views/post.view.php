@@ -29,7 +29,7 @@
     <nav id="hamburger-nav">
         <div class="logo">Imran Arab</div>
         <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleSidebar()">
+            <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -47,6 +47,7 @@
             </div>
         </div>
     </nav>
+    <div class="menu-overlay"></div>
 </header>
 <!--<body>-->
 <body>
@@ -81,30 +82,6 @@
             </form>
         </div>
     </div>
-
-
-<!--<div class="post-form">-->
-<!--<form action="/post" method="post" class="post-form-style">-->
-<!--        <div>-->
-<!--            <label for="title">Title:</label>-->
-<!--            <input type="text" id="title" name="title"><br><br>-->
-<!--        </div>-->
-<!---->
-<!--        <div>-->
-<!--            <label for="content">Content:</label>-->
-<!--            <input type="text" id="content" name="content"><br><br>-->
-<!--        </div>-->
-<!---->
-<!--        <div>-->
-<!--            <label for="author">Author:</label>-->
-<!--            <input type="text" id="author" name="author"><br><br>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="post-submit">-->
-<!--            <button type="submit">Submit</button>-->
-<!--        </div>-->
-<!--    </form>-->
-<!--</div>-->
 <?php endif; ?>
 <script src="/views/js/myScript.js"></script>
 </body>

@@ -29,7 +29,7 @@
         <div class="logo">Imran Arab</div>
         <div class="menu-overlay"></div>
         <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleSidebar()">
+            <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>

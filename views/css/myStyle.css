@@ -19,6 +19,7 @@ body {
     font-family: "Poppins", sans-serif;
     line-height: 1.6;
 
+
 }
 body.posts-page {
     background-color: grey; /* Lichtgrijze achtergrond */
@@ -76,6 +77,10 @@ a:hover{
     display: inline-block;
     z-index: 20;
 }
+.hamburger-icon.open {
+    display: none; /* Hide the icon when sidebar is open */
+}
+
 .hamburger-icon {
     display: flex;
     flex-direction: column;
@@ -112,19 +117,14 @@ a:hover{
     position: fixed; /* Vast aan het scherm */
     top: 0;
     right: 0; /* Start buiten beeld aan de linkerkant */
-    width: 50%; /* Breedte van het menu */
+    width: 300px; /* Breedte van het menu */
     height: 100vh; /* Volledige schermhoogte */
     background-color: rgba(0,0,0,0.8); /* Menu-achtergrondkleur */
-    /*box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); !* Subtiele schaduw *!*/
-    /*overflow-y: auto;*/
-    /*color: white;*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
     transform: translateX(100%);
     transition: transform 0.3s ease; /* Voor vloeiende overgang */
     z-index: 20; /* Boven de rest van de content */
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0, 0.5);
 
 }
 
@@ -148,28 +148,10 @@ a:hover{
 }
 
 
-/*.menu-links{*/
-/*    position: absolute;*/
-/*    top: 100%;*/
-/*    right: 0;*/
-/*    background-color: white;*/
-/*    width: fit-content;*/
-/*    max-height: 0;*/
-/*    overflow: hidden;*/
-/*    transition: max-height 0.3s ease, border-radius 0.3s ease;*/
-/*    z-index: 20;*/
-/*    padding: 0;*/
-/*    border-radius: 20px;*/
-/*    box-shadow: 0 4px 8px rgba( 0,0,0,0.2);*/
-/*    border: 1px solid #ddd;*/
-/*    margin: 0;*/
-
-
-
 .menu-links a{
-    /*display: block;*/
-    /*padding: 15px;*/
-    text-align: center;
+    display: block;
+    padding: 15px 10px;
+    text-align: right;
     font-size: 1.5rem;
     color: white;
     text-decoration: none;
@@ -177,6 +159,8 @@ a:hover{
 
     .menu-links a:hover {
         background-color: #f1f1f1; /* Donkerdere grijs bij hover */
+        color: black;
+
     }
 
 }
@@ -184,13 +168,6 @@ a:hover{
     list-style: none;
     padding: 5px 0;
 }
-
-/*.menu-links.open{*/
-/*    max-height: 700px;*/
-/*    display: block;*/
-/*    visibility: visible;*/
-/*    opacity: 1;*/
-/*    transition: max-height 0.3s ease-in-out;*/
 
     .menu-links, .hamburger-icon {
         background-color: transparent;
@@ -245,6 +222,8 @@ section {
 
 .section-container{
     display: flex;
+
+
 }
 
 /* Profile Section*/
@@ -353,7 +332,7 @@ section {
 }
 .about-containers{
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     margin-top: 2rem;
 }
 .about-details-container{
@@ -387,10 +366,10 @@ section {
     /*border-color: rgb(163,163,163);*/
     text-align: center;
 }
-.section-container{
-    gap: 4rem;
-    height: 80%;
-}
+/*.section-container{*/
+/*    gap: 4rem;*/
+/*    height: 80%;*/
+/*}*/
 .section_pic-container{
     height: 400px;
     width: 400px;
@@ -413,28 +392,12 @@ section {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsieve styling voor mobiel */
-@media (max-width: 768px) {
-    .section-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .details-container {
-        width: 100%;
-        margin: 0.5rem 0;
-    }
-
-    /* Hover effect op mobiel, indien gewenst */
-    .details-container:hover {
-        transform: scale(1.05); /* Iets groter op mobiel voor een subtiel effect */
-    }
-}
 
 
 /* Vaardigheden sectie */
 #vaardigheden {
   position: relative;
+    margin-bottom: 5rem;
 }
 .vaardigheden-sub-title{
     color: rgb(85,85,85);
@@ -480,7 +443,8 @@ position: relative;
 
 .section-container{
     gap: 4rem;
-    height: 80%;
+    padding-bottom: 4rem;
+    height: auto;
 }
 .section_pic-container{
     height: 400px;
@@ -492,6 +456,11 @@ position: relative;
 #portfolio{
     position: relative;
 }
+#portfolio h2 {
+    text-align: center;
+    margin-top: 10px; /* Pas de marge naar wens aan */
+}
+
 .color-container{
     border-color: rgb(163,163,163);
     background: rgb(250,250,250);
@@ -524,12 +493,7 @@ position: relative;
     text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    bottom: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
+
 }
 /* Lees meer knop */
 .lees-meer-btn {
@@ -556,11 +520,7 @@ position: relative;
 }
 
 .extra-content {
-    display: none; /* Verborgen bij start */
-    /*padding-top: 10px;*/
-    /*overflow: hidden;*/
-    /*max-height: 0;*/
-    /*transition: max-height 0.5s ease;*/
+    display: none;
 }
 .extra-content p{
     color: black;
@@ -616,7 +576,7 @@ footer h3{
 .socials-footer li a{
     text-decoration: none;
     color: #fff;
-    border: 1.1px solid white;
+    border: 1px solid white;
     padding: 8px;
     border-radius: 50%;
     width: 35px;
@@ -633,7 +593,7 @@ footer h3{
 }
 .footer-menu ul li a{
     color: white;
-    border: 1.3px solid white;
+    border: 1px solid white;
     padding: 6px 15px;
     border-radius: 50px;
     text-decoration: none;
@@ -690,6 +650,7 @@ body.posts-page {
 }
 
 
+
 /* contact formulier */
 
 .contact-form {
@@ -738,13 +699,12 @@ body.posts-page {
     margin-top: 30px;
     padding: 0 ;
     max-width: 1200px;
-    /*margin: auto;*/
+
 }
 .contact-container-form  .contactInfo-form{
     width: 50%;
     max-width: 1200px;
-    /*display: flex;*/
-    /*flex-direction: column;*/
+
 }
 .contact-container-form .contactForm {
     width: 50%;
@@ -821,6 +781,7 @@ body.posts-page {
     transition: 0.5s;
     color: #666;
 }
+
 .contactForm .InputBox-contact input:focus ~ span,
 .contactForm .InputBox-contact input:valid ~ span,
 .contactForm .InputBox-contact textarea:focus ~ span,
@@ -839,25 +800,7 @@ body.posts-page {
     font-size: 18px;
 }
 
-/*@media (max-width: 991px) {*/
-/*    .contact-form{*/
-/*        padding: 20px;*/
-/*    }*/
-/*    .contact-container-form{*/
-/*        flex-direction: column;*/
-/*    }*/
-/*    .contact-container-form, .contactForm {*/
-/*        width: 100%;*/
-/*        padding: 0 20px;*/
-/*    }*/
-/*    .contact-container-form .contactInfo-form{*/
-/*        margin-bottom: 40px;*/
-/*    }*/
-/*    .contact-container-form .contactInfo-form,*/
-/*    .contactForm{*/
-/*        width: 100%;*/
-/*    }*/
-/*}*/
+
 
     /* post formulier */
 
@@ -934,3 +877,5 @@ body.posts-page {
 .post-form-wrapper button[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+

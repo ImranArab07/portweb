@@ -6,29 +6,19 @@
     function toggleMenu() {
         menuLinks.classList.toggle("open");
         overlay.classList.toggle("show");
-        hamburgerIcon.classList.toggle("open");
+        // hamburgerIcon.classList.toggle("open");
 
         if (menuLinks.classList.contains("open")) {
             document.body.style.overflow = "hidden";
+            hamburgerIcon.style.display = "none";
         } else {
             document.body.style.overflow = "auto";
+            hamburgerIcon.style.display = "flex";
         }
+
     }
 
-
-    hamburgerIcon.addEventListener('click', toggleMenu);
-    // () => {
-    //     menuLinks.classList.toggle("open");
-    //     // icon.classList.toggle("open");
-    //     overlay.classList.toggle("show");
-    //     hamburgerIcon.classList.toggle("open");
-
-
-        overlay.addEventListener('click', () => {
-            menuLinks.classList.remove('open');
-            overlay.classList.remove('show');
-            hamburgerIcon.classList.remove('open');
-        });
+        overlay.addEventListener('click', toggleMenu);
 
 
         document.addEventListener("DOMContentLoaded", function () {
@@ -83,7 +73,3 @@
                 button.textContent = "Lees minder";
             }
         }
-
-
-
-
